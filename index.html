@@ -1,340 +1,630 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Dr Abdulla">
-  <meta name="description" content="Dr Abdulla | Applied Economist | Policy Researcher | V.V. Giri National Labour Institute">
-  <title>Dr Abdulla | Applied Economics</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr Abdulla | Applied Economics Researcher</title>
+    <meta name="description" content="Applied Economics researcher specializing in Labour Economics, Industrial Productivity, and Climate & Agriculture. Academic portfolio including publications, CV, teaching, and resources.">
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset and Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            serif: ['Playfair Display', 'serif'],
-          },
-          colors: {
-            brand: {
-              gold: '#D4AF37',
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f8f9fa;
+            --text-color: #212529;
+            --light-gray: #ecf0f1;
+            --border-radius: 8px;
+            --transition: 0.3s ease;
+            --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header/Hero Section */
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 0 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><circle cx="50" cy="50" r="30" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid rgba(255,255,255,0.3);
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        header h2 {
+            font-size: 1.3rem;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+            background: rgba(255,255,255,0.15);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(10px);
+            min-width: 120px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4.5rem;
+        }
+
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--secondary-color);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .nav-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        /* Main Content */
+        main {
+            padding: 4rem 0;
+        }
+
+        .section {
+            margin-bottom: 3.5rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-gray);
+            display: inline-block;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        .about-text p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight {
+            background: white;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1rem;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            min-width: 200px;
+        }
+
+        /* Research Pillars */
+        .research-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .pillar {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 1.8rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+
+        .pillar:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .pillar h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .pillar-icon {
+            font-size: 1.2rem;
+        }
+
+        /* Navigation Footer */
+        .nav-footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 0;
+            margin-top: 3rem;
+        }
+
+        .nav-footer h3 {
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: var(--transition);
+            width: 45px;
+            height: 45px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .social-links a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
             }
-          }
+
+            .stats {
+                gap: 1.5rem;
+            }
         }
-      }
-    }
-  </script>
 
-  <style>
-    /* Elegant Link Underlines */
-    .hover-underline {
-      position: relative;
-      text-decoration: none;
-    }
-    .hover-underline::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 1px;
-      bottom: -4px;
-      left: 0;
-      background-color: currentColor;
-      transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    }
-    .hover-underline:hover::after, .hover-underline.active::after {
-      width: 100%;
-    }
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: flex;
+            }
 
-    /* Refined Cards */
-    .art-card {
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .dark .art-card {
-      background: rgba(30, 30, 30, 0.5);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    .art-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 40px -10px rgba(0,0,0,0.1);
-    }
-    .dark .art-card:hover {
-      box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
-      border-color: rgba(212, 175, 55, 0.3); 
-    }
+            .nav-menu {
+                position: fixed;
+                top: 4.5rem;
+                right: -100%;
+                background: white;
+                width: 80%;
+                max-width: 300px;
+                height: calc(100vh - 4.5rem);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 3rem;
+                transition: 0.3s ease;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                border-left: 1px solid var(--light-gray);
+                z-index: 999;
+            }
 
-    /* Scroll Reveal Animations */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-    }
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .delay-100 { transition-delay: 100ms; }
-    .delay-200 { transition-delay: 200ms; }
-    .delay-300 { transition-delay: 300ms; }
+            .nav-menu.active {
+                right: 0;
+            }
 
-    /* Abstract Background Accent */
-    .bg-accent {
-      position: absolute;
-      width: 60vw;
-      height: 60vw;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, rgba(0,0,0,0) 70%);
-      top: -20vw;
-      right: -20vw;
-      z-index: -1;
-      pointer-events: none;
-    }
-    .dark .bg-accent {
-      background: radial-gradient(circle, rgba(212,175,55,0.08) 0%, rgba(0,0,0,0) 70%);
-    }
-  </style>
+            .nav-menu li {
+                margin: 1.5rem 0;
+            }
+
+            .nav-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .nav-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .nav-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header h2 {
+                font-size: 1.1rem;
+            }
+
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .nav-footer {
+                padding: 2rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content {
+                padding: 0 1rem;
+            }
+
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .nav-footer h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            header, .nav-toggle, .social-links, .nav-footer {
+                display: none !important;
+            }
+
+            body {
+                background: white !important;
+                color: black !;
+            }
+
+            .container {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+
+            .section {
+                margin-bottom: 2rem !important;
+                page-break-inside: avoid;
+            }
+
+            a {
+                color: inherit !important;
+                text-decoration: underline !important;
+            }
+        }
+    </style>
 </head>
-
-<!-- Removed the buggy 'dark' class from the body tag -->
-<body class="antialiased min-h-screen flex flex-col relative bg-[#fcfcfc] dark:bg-[#121212] transition-colors duration-500">
-
-  <div class="bg-accent"></div>
-
-  <!-- Minimalist Navigation -->
-  <header class="fixed w-full top-0 z-50 bg-[#fcfcfc]/90 dark:bg-[#121212]/90 backdrop-blur-md border-b border-gray-200 dark:border-white/5 transition-colors duration-500">
-    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-      <a href="/" class="font-serif text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-        Dr Abdulla<span class="text-brand-gold">.</span>
-      </a>
-      
-      <!-- Desktop Nav -->
-      <!-- Note: Add the classes 'active text-brand-gold' to the specific link of the page you are currently on -->
-      <nav class="hidden xl:flex items-center space-x-6 text-sm font-medium tracking-wide">
-        <a href="/" class="hover-underline text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
-        <a href="/cv.html" class="hover-underline text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">CV</a>
-        <a href="/research.html" class="hover-underline text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Research</a>
-        <a href="/teaching.html" class="hover-underline text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Teaching</a>
-        <a href="/resource.html" class="hover-underline text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Resources</a>
-        <a href="/learning-resources.html" class="hover-underline text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Learning</a>
-        <a href="/Efficiency & Productivity Estimation.html" class="hover-underline text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Efficiency</a>
-        
-        <button id="theme-toggle" class="ml-4 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-300" aria-label="Toggle Theme">
-          <i class="fas fa-adjust"></i>
-        </button>
-      </nav>
-
-      <!-- Mobile Menu Button -->
-      <button id="mobile-toggle" class="xl:hidden text-2xl text-gray-800 dark:text-white">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </header>
-
-  <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="fixed inset-0 bg-[#fcfcfc] dark:bg-[#121212] z-40 hidden flex-col items-center justify-center space-y-6 text-xl font-serif">
-    <button id="mobile-close" class="absolute top-6 right-6 text-3xl text-gray-800 dark:text-white">
-      <i class="fas fa-times"></i>
-    </button>
-    <a href="/" class="text-gray-800 dark:text-gray-200 hover:text-brand-gold transition-colors">About</a>
-    <a href="/cv.html" class="text-gray-800 dark:text-gray-200 hover:text-brand-gold transition-colors">CV</a>
-    <a href="/research.html" class="text-gray-800 dark:text-gray-200 hover:text-brand-gold transition-colors">Research</a>
-    <a href="/teaching.html" class="text-gray-800 dark:text-gray-200 hover:text-brand-gold transition-colors">Teaching</a>
-    <a href="/resource.html" class="text-gray-800 dark:text-gray-200 hover:text-brand-gold transition-colors">Resources</a>
-    <a href="/learning-resources.html" class="text-gray-800 dark:text-gray-200 hover:text-brand-gold transition-colors">Learning</a>
-    <a href="/Efficiency & Productivity Estimation.html" class="text-gray-800 dark:text-gray-200 hover:text-brand-gold transition-colors">Efficiency</a>
-  </div>
-
-  <main class="flex-grow pt-32 pb-20">
-    
-    <!-- Hero Section -->
-    <section class="max-w-7xl mx-auto px-6 py-20 lg:py-32 reveal">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <div class="space-y-8">
-          <p class="text-sm font-semibold tracking-widest uppercase text-brand-gold">Economist & Researcher</p>
-          <h1 class="text-5xl lg:text-7xl font-serif leading-tight text-gray-900 dark:text-white">
-            Advancing policy through <span class="italic text-brand-gold">empirical</span> rigor.
-          </h1>
-          <p class="text-lg lg:text-xl font-light max-w-lg leading-relaxed text-gray-700 dark:text-gray-300">
-            Researcher at the V.V. Giri National Labour Institute, specializing in labour markets, industrial productivity, and climate resilience.
-          </p>
-          <div class="flex gap-6 pt-4">
-            <a href="mailto:abdullahalig007@gmail.com" class="text-gray-600 dark:text-gray-400 hover:text-brand-gold dark:hover:text-brand-gold transition-colors text-2xl"><i class="fas fa-envelope"></i></a>
-            <a href="https://scholar.google.com/citations?user=6CE-0s8AAAAJ" class="text-gray-600 dark:text-gray-400 hover:text-brand-gold dark:hover:text-brand-gold transition-colors text-2xl"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://orcid.org/0000-0002-6544-1056" class="text-gray-600 dark:text-gray-400 hover:text-brand-gold dark:hover:text-brand-gold transition-colors text-2xl"><i class="fab fa-orcid"></i></a>
-            <a href="https://www.researchgate.net/profile/Dr-Abdulla" class="text-gray-600 dark:text-gray-400 hover:text-brand-gold dark:hover:text-brand-gold transition-colors text-2xl"><i class="fab fa-researchgate"></i></a>
-          </div>
+<body>
+    <!-- Header/Hero Section -->
+    <header>
+        <div class="container hero-content">
+            <img src="/ph.jpg" alt="Professional headshot of Dr Abdulla in business attire" class="profile-image">
+            <h1>Dr Abdulla | Applied Economics</h1>
+            <h2>Economist & Researcher</h2>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">14+</span>
+                    <span class="stat-label">Publications</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Gov. Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Core Pillars</span>
+                </div>
+            </div>
         </div>
-        
-        <div class="relative flex justify-center lg:justify-end reveal delay-200">
-          <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border border-gray-200 dark:border-gray-800 shadow-2xl relative z-10 bg-white">
-            <img src="/ph.jpg" alt="Dr Abdulla" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out">
-          </div>
-          <div class="absolute w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-brand-gold/40 top-4 right-4 lg:right-0 lg:-translate-x-4 -translate-y-4 z-0"></div>
+    </header>
+
+    <!-- Navigation -->
+    <nav aria-label="Primary navigation">
+        <div class="container nav-container">
+            <a href="/" class="nav-brand">Dr Abdulla</a>
+            <button class="nav-toggle" aria-label="Open menu" aria-controls="primary-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="primary-menu">
+                <li><a href="/" aria-current="page">About</a></li>
+                <li><a href="/cv.html">CV</a></li>
+                <li><a href="/research.html">Research</a></li>
+                <li><a href="/teaching.html">Teaching</a></li>
+                <li><a href="/resource.html">Resources</a></li>
+                <li><a href="/learning-resources.html">Learning Resources</a></li>
+                <li><a href="/Efficiency & Productivity Estimation.html">Efficiency & Productivity Estimation</a></li>
+            </ul>
         </div>
-      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- About Section -->
+        <section class="section" id="about" aria-labelledby="about-title">
+            <h2 class="section-title" id="about-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am an applied economist with extensive experience in research, policy analysis, and academic teaching. My work focuses on delivering evidence-based insights that inform effective economic policies and business strategies.</p>
+                    <p>With a strong quantitative background and practical field experience, I specialize in transforming complex economic data into actionable recommendations for policymakers, businesses, and international organizations.</p>
+                    <p>My research approach combines rigorous econometric analysis with deep contextual understanding to address real-world economic challenges in developing and emerging markets.</p>
+                </div>
+                <div class="about-text">
+                    <div class="highlights">
+                        <div class="highlight">
+                            <h3>Research Focus</h3>
+                            <p>Labour Economics • Industrial Productivity • Climate & Agriculture</p>
+                        </div>
+                        <div class="highlight">
+                            <h3>Methodology</h3>
+                            <p>Econometric Analysis • Policy Evaluation • Impact Assessment</p>
+                        </div>
+                        <div class="highlight">
+                            <h3>Geographic Expertise</h3>
+                            <p>South Asia • Sub-Saharan Africa • MENA Region</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Pillars Section -->
+        <section class="section" id="research-pillars" aria-labelledby="pillars-title">
+            <h2 class="section-title" id="pillars-title">Core Research Pillars</h2>
+            <div class="research-pillars">
+                <div class="pillar">
+                    <div class="pillar-icon">👥</div>
+                    <h3>Labour Economics</h3>
+                    <p>Analyzing employment patterns, wage determination, skill development, and labor market policies to improve workforce participation and reduce unemployment, particularly among youth and women.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">⚙️</div>
+                    <h3>Industrial Productivity</h3>
+                    <p>Examining factors affecting firm-level productivity, technology adoption, innovation systems, and industrial policy effectiveness to enhance competitiveness and sustainable growth.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">🌱</div>
+                    <h3>Climate & Agriculture</h3>
+                    <p>Investigating climate change impacts on agricultural systems, adaptation strategies, sustainable farming practices, and food security policies in vulnerable regions.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Navigation Footer -->
+    <section class="nav-footer" aria-label="Quick navigation">
+        <div class="container">
+            <h3>Explore More</h3>
+            <p>Navigate through my academic portfolio using the menu above or visit these key sections directly:</p>
+            <div class="social-links">
+                <a href="/cv.html" title="Curriculum Vitae">📄</a>
+                <a href="/research.html" title="Research Publications">🔬</a>
+                <a href="/teaching.html" title="Teaching Experience">🎓</a>
+                <a href="/resource.html" title="Economic Resources">📚</a>
+                <a href="mailto:abdullahalig007@gmail.com" title="Email Me">✉️</a>
+                <a href="https://scholar.google.com/citations?user=6CE-0s8AAAAJ" target="_blank" rel="noopener" title="Google Scholar">🎓</a>
+                <a href="https://orcid.org/0000-0002-6544-1056" target="_blank" rel="noopener" title="ORCID">🔗</a>
+                <a href="https://www.researchgate.net/profile/Dr-Abdulla" target="_blank" rel="noopener" title="ResearchGate">🔬</a>
+                <a href="https://github.com/abdullahalig007" target="_blank" rel="noopener" title="GitHub">💻</a>
+                <a href="https://www.linkedin.com/in/dr-abdulla-00793160/" target="_blank" rel="noopener" title="LinkedIn">💼</a>
+                <a href="https://x.com/abdullahalig07" target="_blank" rel="noopener" title="Twitter/X">🐦</a>
+            </div>
+        </div>
     </section>
 
-    <!-- Refined Metrics -->
-    <section class="max-w-7xl mx-auto px-6 py-16 border-y border-gray-200 dark:border-white/5 reveal">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-gray-200 dark:divide-white/5">
-        <div class="text-center px-4">
-          <div class="font-serif text-4xl md:text-5xl mb-2 text-brand-gold">14+</div>
-          <div class="text-sm tracking-wider uppercase font-medium text-gray-600 dark:text-gray-400">Publications</div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Dr Abdulla. All rights reserved.</p>
+            <p>
+                <a href="/">Home</a> |
+                <a href="/cv.html">CV</a> |
+                <a href="/research.html">Research</a> |
+                <a href="/teaching.html">Teaching</a>
+            </p>
+            <p>Last updated: June 2026</p>
         </div>
-        <div class="text-center px-4">
-          <div class="font-serif text-4xl md:text-5xl mb-2 text-brand-gold">5+</div>
-          <div class="text-sm tracking-wider uppercase font-medium text-gray-600 dark:text-gray-400">Gov. Projects</div>
-        </div>
-        <div class="text-center px-4">
-          <div class="font-serif text-4xl md:text-5xl mb-2 text-brand-gold">100+</div>
-          <div class="text-sm tracking-wider uppercase font-medium text-gray-600 dark:text-gray-400">Empirical Analyses</div>
-        </div>
-        <div class="text-center px-4">
-          <div class="font-serif text-4xl md:text-5xl mb-2 text-brand-gold">10+</div>
-          <div class="text-sm tracking-wider uppercase font-medium text-gray-600 dark:text-gray-400">Years Experience</div>
-        </div>
-      </div>
-    </section>
+    </footer>
 
-    <!-- Biography Section -->
-    <section class="max-w-7xl mx-auto px-6 py-24 reveal">
-      <div class="grid md:grid-cols-12 gap-12">
-        <div class="md:col-span-4">
-          <h2 class="font-serif text-3xl lg:text-4xl text-gray-900 dark:text-white">Background &<br>Expertise.</h2>
-        </div>
-        <div class="md:col-span-8 space-y-6 font-light leading-relaxed text-lg text-gray-700 dark:text-gray-300">
-          <p>
-            With over a decade of experience, my work focuses on applying causal inference, advanced econometrics, and statistical modeling to large-scale survey and administrative data. My research translates complex datasets into actionable, evidence-based policy insights.
-          </p>
-          <p>
-            Currently serving as a Researcher at the <span class="font-medium text-gray-900 dark:text-white">V.V. Giri National Labour Institute</span> (Ministry of Labour & Employment, GoI). Previously, I served as an Assistant Professor at <span class="font-medium text-gray-900 dark:text-white">Jamia Millia Islamia</span>, and contributed to research at ICAR-NIAP, NAAS, and the Ministry of Commerce & Industry.
-          </p>
-          <div class="pt-6">
-            <a href="/cv.html" class="inline-flex items-center gap-3 pb-1 border-b border-brand-gold text-brand-gold hover:text-gray-900 dark:hover:text-white hover:border-gray-900 dark:hover:border-white transition-colors uppercase tracking-widest text-sm font-medium">
-              View Full Curriculum Vitae <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
 
-    <!-- Featured Research Areas -->
-    <section class="max-w-7xl mx-auto px-6 py-16 reveal">
-      <h2 class="font-serif text-3xl lg:text-4xl mb-12 text-center text-gray-900 dark:text-white">Core Research Pillars</h2>
-      
-      <div class="grid md:grid-cols-3 gap-8">
-        
-        <div class="art-card p-10 rounded-2xl reveal delay-100">
-          <div class="w-12 h-12 rounded-full border border-gray-300 dark:border-gray-700 flex items-center justify-center mb-6 text-brand-gold">
-            <i class="fas fa-users"></i>
-          </div>
-          <h3 class="font-serif text-xl mb-4 text-gray-900 dark:text-white">Labour Economics</h3>
-          <p class="font-light text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-            Exploring labour informality, wage dynamics, worker vulnerability, employment transitions, and the efficacy of social protection programs using PLFS and NSSO data.
-          </p>
-        </div>
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
 
-        <div class="art-card p-10 rounded-2xl reveal delay-200">
-          <div class="w-12 h-12 rounded-full border border-gray-300 dark:border-gray-700 flex items-center justify-center mb-6 text-brand-gold">
-            <i class="fas fa-industry"></i>
-          </div>
-          <h3 class="font-serif text-xl mb-4 text-gray-900 dark:text-white">Industrial Productivity</h3>
-          <p class="font-light text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-            Conducting ASI-based productivity decomposition, estimating technological disparities, and analyzing the economics of the industrial energy transition.
-          </p>
-        </div>
+            // Toggle aria-expanded attribute
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+            navToggle.setAttribute('aria-expanded', !isExpanded);
+        });
 
-        <div class="art-card p-10 rounded-2xl reveal delay-300">
-          <div class="w-12 h-12 rounded-full border border-gray-300 dark:border-gray-700 flex items-center justify-center mb-6 text-brand-gold">
-            <i class="fas fa-leaf"></i>
-          </div>
-          <h3 class="font-serif text-xl mb-4 text-gray-900 dark:text-white">Climate & Agriculture</h3>
-          <p class="font-light text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-            Evaluating climate resilience, adaptation economics, and the vulnerability of agricultural systems across varying geopolitical landscapes in India.
-          </p>
-        </div>
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
 
-      </div>
-    </section>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-  </main>
-
-  <footer class="mt-auto border-t border-gray-200 dark:border-white/5 py-10">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-      <div class="font-serif text-xl text-gray-900 dark:text-white">Dr Abdulla<span class="text-brand-gold">.</span></div>
-      <p class="text-sm font-light text-gray-600 dark:text-gray-400">&copy; 2026 Dr Abdulla. All rights reserved.</p>
-      <div class="flex gap-4 text-gray-500 dark:text-gray-400">
-        <a href="https://github.com/abdullahalig007" class="hover:text-brand-gold transition"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/dr-abdulla-00793160/" class="hover:text-brand-gold transition"><i class="fab fa-linkedin"></i></a>
-        <a href="https://x.com/abdullahalig07" class="hover:text-brand-gold transition"><i class="fab fa-twitter"></i></a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Theme Toggle Logic
-    const themeToggle = document.getElementById('theme-toggle');
-    const htmlElement = document.documentElement;
-    
-    // Check local storage or system preference
-    if (localStorage.getItem('theme') === 'light') {
-      htmlElement.classList.remove('dark');
-    } else {
-      htmlElement.classList.add('dark'); 
-    }
-
-    themeToggle.addEventListener('click', () => {
-      htmlElement.classList.toggle('dark');
-      const isDark = htmlElement.classList.contains('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    });
-
-    // Mobile Menu Toggle
-    const mobileBtn = document.getElementById('mobile-toggle');
-    const mobileClose = document.getElementById('mobile-close');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('hidden');
-      mobileMenu.classList.add('flex');
-    });
-
-    mobileClose.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-      mobileMenu.classList.remove('flex');
-    });
-
-    // Scroll Reveal Animation Observer
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealOptions = {
-      threshold: 0.15,
-      rootMargin: "0px 0px -50px 0px"
-    };
-
-    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-          return;
-        } else {
-          entry.target.classList.add('active');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, revealOptions);
-
-    revealElements.forEach(el => {
-      revealOnScroll.observe(el);
-    });
-  </script>
+        // Add smooth scroll to anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
