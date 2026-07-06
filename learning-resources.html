@@ -54,17 +54,15 @@
     /* Scroll Reveal */
     .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
     .reveal.active { opacity: 1; transform: translateY(0); }
-    .delay-100 { transition-delay: 100ms; }
-    .delay-200 { transition-delay: 200ms; }
 
     /* Abstract Background */
     .bg-accent { position: absolute; width: 60vw; height: 60vw; border-radius: 50%; background: radial-gradient(circle, rgba(212,175,55,0.04) 0%, rgba(0,0,0,0) 70%); top: -20vw; right: -20vw; z-index: -1; pointer-events: none; }
     .dark .bg-accent { background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, rgba(0,0,0,0) 70%); }
 
-    /* Accordion & Code */
-    .collapse-btn { cursor: pointer; transition: color 0.3s; }
-    .collapse-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease, opacity 0.4s ease; opacity: 0; }
-    .collapse-content.open { max-height: 8000px; opacity: 1; }
+    /* Accordion & Code Layout Safety Budget */
+    .collapse-btn { cursor: pointer; }
+    .collapse-content { max-height: 0; overflow: hidden; transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease; opacity: 0; }
+    .collapse-content.open { max-height: 75000px; opacity: 1; }
     pre[class*=language-] { border-radius: 0.75rem; margin: 1.5rem 0; font-size: 0.875rem; border: 1px solid rgba(0,0,0,0.1); box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); }
     .dark pre[class*=language-] { border: 1px solid rgba(255,255,255,0.1); box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); }
     
@@ -81,7 +79,7 @@
 <body class="antialiased min-h-screen flex flex-col relative bg-[#fcfcfc] dark:bg-[#121212] transition-colors duration-500">
   <div class="bg-accent"></div>
 
-  <!-- Unified 7-Link Navigation -->
+  <!-- Unified Navigation -->
   <header class="fixed w-full top-0 z-50 bg-[#fcfcfc]/90 dark:bg-[#121212]/90 backdrop-blur-md border-b border-gray-200 dark:border-white/5 transition-colors duration-500">
     <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
       <a href="/" class="font-serif text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
@@ -137,7 +135,7 @@
       </div>
     </section>
 
-    <!-- Introductory Appended Sections Integrated Here -->
+    <!-- Introductory Academy Information Paths -->
     <section class="max-w-7xl mx-auto px-6 py-12 reveal">
       <div class="grid lg:grid-cols-3 gap-8">
         <!-- Academy Paths -->
@@ -191,7 +189,7 @@
     <!-- Main Learning Hub with Tabs -->
     <section class="max-w-7xl mx-auto px-6 py-12 reveal">
       
-      <!-- Custom Elegant Tabs -->
+      <!-- Tabs Layout Controls -->
       <div class="flex flex-wrap gap-4 border-b border-gray-200 dark:border-gray-800 pb-4 mb-10" id="tabs">
         <button class="tab-btn active px-4 py-2 font-serif text-lg tracking-wide text-brand-gold border-b-2 border-brand-gold transition-colors" data-target="templates">Templates</button>
         <button class="tab-btn px-4 py-2 font-serif text-lg tracking-wide text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors" data-target="free-learning">Courses</button>
@@ -204,18 +202,2856 @@
       <!-- TAB 1: TEMPLATES -->
       <div id="templates" class="tab-content active space-y-8">
         <div class="art-card rounded-2xl p-8">
-          <h2 class="font-serif text-2xl text-gray-900 dark:text-white mb-6"><i class="fas fa-file-code text-brand-gold mr-2"></i> Do-File Templates</h2>
+          <div class="flex items-center justify-between border-b border-gray-100 dark:border-gray-800 pb-4 mb-8">
+            <h2 class="font-serif text-3xl text-gray-900 dark:text-white flex items-center"><i class="fas fa-file-code text-brand-gold mr-3"></i> Core Replication Scripts</h2>
+            <span class="text-xs font-mono px-3 py-1 bg-brand-gold/10 text-brand-gold rounded-full tracking-wider uppercase">Stata 18 / 19 Checked</span>
+          </div>
           
-          <div class="space-y-6">
-            <!-- Cleaning -->
-            <div class="border border-gray-200 dark:border-gray-800 rounded-xl p-6">
-              <h3 class="collapse-btn font-medium text-lg text-gray-900 dark:text-white flex items-center gap-3">
-                <i class="fas fa-chevron-down text-brand-gold transition-transform"></i> cleaning.do — Data Cleaning
-              </h3>
-              <div class="collapse-content mt-4 relative group">
-                <button class="copy-btn absolute top-3 right-3 text-xs border border-gray-400 bg-gray-200 dark:border-white/20 dark:bg-white/10 px-3 py-1.5 rounded transition-colors opacity-0 group-hover:opacity-100">Copy</button>
-                <pre><code class="language-stata">
-********************************************************************************
+          <div class="space-y-8">
+
+            <!-- TEMPLATE CARD 1: Core Fundamentals (training_vvgnli.do) -->
+            <div class="border border-emerald-500/20 bg-emerald-500/[0.01] dark:bg-emerald-500/[0.02] rounded-xl p-6 transition-all hover:border-emerald-500/40">
+              <div class="collapse-btn flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div class="flex items-start gap-4">
+                  <div class="p-3 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-xl mt-1">
+                    <i class="fas fa-graduation-cap text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-serif text-xl font-semibold text-gray-900 dark:text-white tracking-wide group-hover:text-emerald-500">
+                      training_vvgnli.do — Core Econometrics Fundamentals
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-light mt-1 max-w-3xl">
+                      A complete foundational curriculum tracking Modules 1 through 10. Covers initial workspace environment configuration, sample distributions, point statistics, data plotting configurations, independent t-tests, and longitudinal balance checks.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 self-end md:self-center">
+                  <span class="text-xs font-mono px-2.5 py-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded">Mod 1-10</span>
+                  <i class="fas fa-chevron-down text-emerald-500 transition-transform duration-300"></i>
+                </div>
+              </div>
+
+              <div class="collapse-content mt-6 relative group">
+                <div class="mb-4 p-4 bg-emerald-500/5 border border-emerald-500/10 rounded-lg text-xs text-gray-600 dark:text-gray-400 flex items-center gap-3">
+                  <i class="fas fa-info-circle text-emerald-500 text-sm"></i>
+                  <span><strong>Workspace Notice:</strong> Uses Stata's built-in reference sheets (<code class="font-mono bg-emerald-500/10 px-1 rounded">sysuse auto.dta</code>, <code class="font-mono bg-emerald-500/10 px-1 rounded">uslifeexp.dta</code>). No local file paths required to initialize training modules.</span>
+                </div>
+                <button class="copy-btn absolute top-16 right-3 z-10 text-xs border border-gray-400 bg-gray-200 dark:border-white/20 dark:bg-white/10 px-3 py-1.5 rounded transition-colors opacity-0 group-hover:opacity-100">Copy Script</button>
+                <pre><code class="language-stata">/*****************************************************************************
+* STATA TRAINING - VVGNLI
+* Module 0: Introduction and Setup
+* Author: Dr Abdulla
+* Date: June 2026
+* Purpose: Familiarize with Stata interface, environment setup, & best practices
+*****************************************************************************/
+
+/* Always start your do-file with a header describing its purpose */
+
+// Clear the workspace to start fresh (drops data, matrices, and scalars)
+clear all
+
+// Close any open graph windows to prevent desktop clutter
+graph drop _all
+
+// Set more off to ensure continuous execution without prompting for page breaks
+set more off
+
+// Check and freeze your Stata version for execution reproducibility
+version 19
+
+// Display current working directory
+pwd
+
+// Change working directory (modify path as needed to your local environment)
+// cd "C:/Users/YourName/Documents/StataTraining"
+
+// Create a log file to record your session commands and output terminal text
+// log using "session1.log", text replace
+
+// Display system parameters and internal return values
+creturn list
+
+// Check available system directories and installation paths
+sysdir
+
+/* Note: We'll use sysuse to load Stata's built-in datasets.
+   These are stored in the PLUS and BASE directories inside your installation */
+
+// List available system datasets
+display "System datasets we'll use today:"
+display "- auto.dta (automobile data)"
+display "- census.dta (US census data)"
+display "- lifeexp.dta (life expectancy data)"
+display "- nlsw88.dta (National Longitudinal Survey)"
+display "- bplong.dta & bpwide.dta (blood pressure panel data)"
+
+/* Best Practices for Do-Files:
+   1. Always include a header with metadata (Author, Date, Version, Purpose)
+   2. Comment your code liberally to ensure work is auditable
+   3. Use clear visual section breaks
+   4. Keep your code legible with consistent indentation and case rules
+   5. Test your code block-by-block using local execution chunks
+*/
+
+display "Setup complete! Ready to begin training."
+
+
+/*****************************************************************************
+* Module 1: Loading and Exploring Data
+* Dataset: auto.dta (1978 Automobile Data)
+* Purpose: Learn fundamental data exploration and inspection commands
+*****************************************************************************/
+
+*------------------------------------------------------------------------------*
+* 1.1: Loading Data
+*------------------------------------------------------------------------------*
+
+// Load the auto dataset (built-in Stata dataset)
+sysuse auto.dta, clear
+
+/* The 'clear' option removes any data currently in memory to make room.
+   auto.dta contains information on 74 automobiles from 1978 */
+
+// Display a confirmation message
+display "Dataset loaded successfully!"
+
+*------------------------------------------------------------------------------*
+* 1.2: Understanding Data Structure
+*------------------------------------------------------------------------------*
+
+// Describe the dataset - structurally evaluates variables, storage types, labels
+describe
+
+/* Key information from describe:
+   - Number of observations (N, rows)
+   - Number of variables (k, columns)
+   - Variable names, storage types (byte, int, float, double, string)
+   - Storage format and mapped value labels
+*/
+
+// Get a compact structural summary
+describe, short
+
+// List variable names only (useful for copy-pasting variable arrays)
+describe, simple
+
+// Count the number of observations explicitly in memory
+count
+
+// Display the first 10 observations across all variables
+list in 1/10
+
+// Display first 10 observations of specific variables of analytical interest
+list make price mpg in 1/10
+
+// Browse the data in Data Editor (view-only mode protects raw data)
+// browse in 1/20
+
+/* Note: browse opens the Data Editor window in read-only mode.
+   Use 'edit' only when executing intentional manual modifications */
+
+*------------------------------------------------------------------------------*
+* 1.3: Understanding Variables
+*------------------------------------------------------------------------------*
+
+// Display structural attributes and text labels for specific variables
+describe make price mpg weight foreign
+
+// Show a compact view of how a variable is stored and filled
+codebook make, compact
+
+// Detailed codebook documentation for a continuous numeric variable
+codebook price
+
+// For categorical variables, evaluate unique numeric mappings and value labels
+codebook foreign
+
+// List unique values and absolute frequencies of a categorical variable
+tabulate foreign
+
+// Inspect technical distribution properties and binary patterns
+inspect foreign
+
+*------------------------------------------------------------------------------*
+* 1.4: Data Types and Formats
+*------------------------------------------------------------------------------*
+
+// Summarize center, spread, and range for continuous numeric variables
+summarize price mpg weight
+
+// Inspect properties of a string variable
+describe make
+
+// Inspect value label dictionaries mapped to numeric indicators
+labelbook origin
+
+// Display explicit value label mappings assigned to raw numbers
+label list origin
+
+*------------------------------------------------------------------------------*
+* 1.5: Quick Data Checks
+*------------------------------------------------------------------------------*
+
+// Check for missing values systematically across all variables
+misstable summarize
+
+// Count missing values for specific variables explicitly
+count if missing(price)
+count if missing(rep78)
+
+// Display explicit observations containing missing fields
+list make rep78 if missing(rep78)
+
+// Dynamically list variables matching specific storage groups
+ds, has(type numeric)
+ds, has(type string)
+
+*------------------------------------------------------------------------------*
+* 1.6: Basic Variable Inspection
+*------------------------------------------------------------------------------*
+
+// Look at the absolute and relative frequency distribution of a variable
+tab foreign
+
+// Inspect frequencies including missing records explicitly
+tab foreign, missing
+
+// Two-way contingency table (Cross-tabulation)
+tab foreign rep78
+
+// Summary statistics for continuous variables (Sample Moments)
+summarize price mpg weight length
+
+// Extended detailed descriptive summary statistics
+summarize price mpg, detail
+
+/* The detail option provides:
+   - Percentiles (p1, p5, p10, p25, p50 [median], p75, p90, p95, p99)
+   - Extreme values (Four lowest and four highest observations)
+   - Higher-order sample moments: Variance, Skewness, Kurtosis
+*/
+
+*------------------------------------------------------------------------------*
+* 1.7: Sorting and Ordering
+*------------------------------------------------------------------------------*
+
+// Sort data by price in ascending order
+sort price
+list make price in 1/5
+
+// Sort data in descending order using the generalized sort command
+gsort -price
+list make price in 1/5
+
+// Sort hierarchically across multiple nested variables
+sort foreign price
+list make foreign price in 1/10
+
+*------------------------------------------------------------------------------*
+* 1.8: Basic Filtering and Subsetting
+*------------------------------------------------------------------------------*
+
+// Count subset records based on boolean logical states
+count if foreign == 1
+count if foreign == 0
+
+// Filter and list attributes based on inequality conditions
+list make price if price &gt; 10000
+
+// Filter using joint intersection conditions (AND logic)
+list make mpg price if mpg &gt; 25 & foreign == 1
+
+// Combine conditions with intersection (&) and union (|) logical gates
+count if price &gt; 10000 & mpg &gt; 20
+count if price &gt; 10000 | mpg &gt; 30
+
+*------------------------------------------------------------------------------*
+* 1.9: Getting Help
+*------------------------------------------------------------------------------*
+
+// Access internal Stata documentation for syntax rules
+help describe
+help summarize
+help list
+
+// Search across local indexes and web repositories for relevant packages
+// search regression
+// findit panel data
+
+display "Module 1 Complete: Data exploration fundamentals mastered!"
+
+
+/*****************************************************************************
+* Module 2: Descriptive Statistics
+* Dataset: auto.dta
+* Purpose: Master descriptive statistical workflows and sample statistics
+*****************************************************************************/
+
+// Load data
+sysuse auto.dta, clear
+
+*------------------------------------------------------------------------------*
+* 2.1: Basic Summary Statistics
+*------------------------------------------------------------------------------*
+
+// Summary table for all variables in the dataset
+summarize
+
+// Target specific columns for point statistics
+summarize price mpg weight
+
+// Unpack full distribution moments and shapes
+summarize price mpg weight, detail
+
+// Construct customized table of descriptive statistics using tabstat
+tabstat price mpg weight, statistics(mean sd min max n) columns(statistics)
+
+// Append specific distribution parameters and percentiles using continuation tags
+tabstat price mpg weight, statistics(mean sd min max p25 p50 p75 n) ///
+    columns(statistics)
+
+/* The '///' sequence allows line breaks inside long command arguments */
+
+*------------------------------------------------------------------------------*
+* 2.2: Statistics by Groups
+*------------------------------------------------------------------------------*
+
+// Sort and execute summary tables across discrete sub-populations
+bysort foreign: summarize price mpg weight
+
+// Alternative syntax utilizing the inline 'sort' conditional argument
+by foreign, sort: summarize price
+
+// Construct structured publication tables grouped by specific variables
+tabstat price mpg weight, by(foreign) statistics(mean sd min max n)
+
+// Conduct an independent two-sample t-test comparing group sample means
+ttest price, by(foreign)
+
+/* ttest output exposes:
+   - Sample parameters across both distinct sub-samples
+   - Point estimate of the difference between group means
+   - Standard error of the difference and calculated test statistics
+*/
+
+*------------------------------------------------------------------------------*
+* 2.3: Frequency Tables
+*------------------------------------------------------------------------------*
+
+// One-way relative frequency tracking
+tabulate foreign
+
+// Expose internal missing counts inside structural distributions
+tabulate foreign, missing
+
+// Inspect cell distributions of multi-valued ordered categorical items
+tab rep78
+
+// Treat missing states as valid structural cells inside tabulations
+tab rep78, missing
+
+*------------------------------------------------------------------------------*
+* 2.4: Cross-Tabulations (Two-Way Tables)
+*------------------------------------------------------------------------------*
+
+// Build raw two-way conditional matrices
+tabulate foreign rep78
+
+// Condition on rows (Row percentages sum up to 100%)
+tabulate foreign rep78, row
+
+// Condition on columns (Column percentages sum up to 100%)
+tabulate foreign rep78, col
+
+// Extract global cell proportions
+tabulate foreign rep78, cell
+
+// Output comprehensive matrix detailing all frequency types simultaneously
+tabulate foreign rep78, row col cell
+
+// Conduct Pearson's Chi-Square Test for Independence
+tabulate foreign rep78, chi2
+
+/* Chi-Square Test of Independence:
+   - Null Hypothesis (H0): Group criteria are independent
+   - Alternative Hypothesis (H1): Group criteria are statistically associated
+*/
+
+// Report expected cell frequencies under the null hypothesis
+tabulate foreign rep78, expected
+
+*------------------------------------------------------------------------------*
+* 2.5: Creating Summary Tables
+*------------------------------------------------------------------------------*
+
+// Construct analytical summaries over a grouping attribute
+table foreign, contents(mean price mean mpg mean weight n)
+
+// Generate a two-dimensional cross-tabulated table of means
+table foreign rep78, contents(mean price n)
+
+// Structure professional outputs with custom numeric rounding masks
+tabstat price mpg weight length, by(foreign) ///
+    statistics(mean sd) format(%9.2f)
+
+*------------------------------------------------------------------------------*
+* 2.6: Correlations
+*------------------------------------------------------------------------------*
+
+// Generate sample Pearson correlation coefficient matrix
+correlate price mpg weight length
+
+// Generate pairwise correlations displaying exact p-values for linear association
+pwcorr price mpg weight length, sig
+
+// Display sample bounds alongside significance tests
+pwcorr price mpg weight length, sig obs
+
+/* Correlation Interpretation Matrix:
+   - Values trace bound boundaries within [-1, +1]
+   - sign denotes direction; absolute value indicates linear strength
+*/
+
+// Fast dual-variable association check
+correlate price mpg
+
+*------------------------------------------------------------------------------*
+* 2.7: Percentiles and Quantiles
+*------------------------------------------------------------------------------*
+
+// Inspect standard quantiles directly from extended summaries
+summarize price, detail
+
+// Extrapolate exact custom percentile cutoffs
+centile price, centile(10 25 50 75 90 95 99)
+
+// Partition the continuous range into discrete ordinal quartiles
+xtile price_quartile = price, nquantiles(4)
+tab price_quartile
+
+// Partition data into 10 symmetric decile bins
+xtile price_decile = price, nquantiles(10)
+tab price_decile
+
+*------------------------------------------------------------------------------*
+* 2.8: Measures of Spread
+*------------------------------------------------------------------------------*
+
+// Isolate and display sample standard variance metrics
+summarize price
+display "Standard deviation: " r(sd)
+display "Variance: " r(Var)
+
+// Compute the Coefficient of Variation (CV = SD / Mean)
+summarize price
+display "Coefficient of variation: " r(sd)/r(mean)
+
+// Unveil absolute range boundary spreads
+summarize price, detail
+display "Range: " r(max) - r(min)
+
+// Calculate the robust Interquartile Range (IQR = p75 - p25)
+summarize price, detail
+display "IQR: " r(p75) - r(p25)
+
+*------------------------------------------------------------------------------*
+* 2.9: Working with Stored Results
+*------------------------------------------------------------------------------*
+
+// Execute a standard calculation command to populate internal background scalars
+summarize price
+
+// Inspect available internal return scalars stored in background memory
+return list
+
+// Fetch dynamic background values into custom mathematical displays
+display "Mean price: $" r(mean)
+display "Number of observations: " r(N)
+display "Standard deviation: $" r(sd)
+
+// Assign system return memory to custom, static user-defined scalars
+summarize price
+scalar mean_price = r(mean)
+scalar sd_price = r(sd)
+
+display "Mean: " mean_price
+display "SD: " sd_price
+
+*------------------------------------------------------------------------------*
+* 2.10: Tabulating Multiple Variables
+*------------------------------------------------------------------------------*
+
+// Produce extensive composite reports across mixed structural features
+tabstat price mpg weight rep78 headroom trunk, ///
+    statistics(mean sd min max) ///
+    columns(statistics) format(%9.2f)
+
+// Group composite metrics across binary criteria splits
+tabstat price mpg weight, by(foreign) ///
+    statistics(mean median sd min max n) ///
+    columns(statistics) format(%9.2f)
+
+// Cross-tabulate secondary data markers over multiple conditions
+table foreign rep78, contents(mean price sd price n)
+
+display "Module 2 Complete: Descriptive statistics mastered!"
+
+
+/*****************************************************************************
+* Module 3: Data Visualization - Part 1 (Basic Graphs)
+* Dataset: auto.dta, lifeexp.dta
+* Purpose: Structural and distributive graphing workflows
+*****************************************************************************/
+
+sysuse auto.dta, clear
+
+*------------------------------------------------------------------------------*
+* 3.1: Histograms (Distribution of Continuous Variables)
+*------------------------------------------------------------------------------*
+
+// Render a base density histogram
+histogram price
+
+// Alter visual granularity by modifying explicit cell bin counts
+histogram price, bin(20)
+
+// Superimpose a theoretical parametric normal density curve
+histogram price, normal
+
+// Apply aesthetic contextual annotation parameters
+histogram price, bin(15) ///
+    title("Distribution of Car Prices") ///
+    xtitle("Price (USD)") ///
+    ytitle("Density") ///
+    note("Source: 1978 Automobile Data")
+
+// Swap density metrics to absolute scale frequencies
+histogram price, frequency bin(15) ///
+    title("Car Price Distribution")
+
+// Generate isolated comparative charts partitioned by group traits
+histogram price, by(foreign) ///
+    title("Price Distribution by Origin")
+
+*------------------------------------------------------------------------------*
+* 3.2: Box Plots (Distribution Summary)
+*------------------------------------------------------------------------------*
+
+// Generate a univariate box-and-whisker visualization
+graph box price
+
+/* Box plot metrics explained:
+   - Core Box: Outlines the Interquartile Range (25th to 75th percentiles)
+   - Median Line: Represents the 50th percentile marker
+   - Whiskers: Extend to boundaries within 1.5 * IQR from box edges
+   - Independent Points: Identify outliers beyond whisker limits
+*/
+
+// Compare structural box ranges grouped across categories
+graph box price, over(foreign)
+
+// Rotate visual orientation to horizontal axis configurations
+graph hbox price, over(foreign)
+
+// Compare distributions of distinct variables side-by-side
+graph box price mpg weight
+
+// Apply titles and descriptive axes labels
+graph box price, over(foreign) ///
+    title("Price Distribution by Car Origin") ///
+    ytitle("Price (USD)") ///
+    note("Box shows IQR, line shows median")
+
+*------------------------------------------------------------------------------*
+* 3.3: Bar Charts (Categorical Variables)
+*------------------------------------------------------------------------------*
+
+// Display an aggregated mean value across ordinal category bins
+graph bar (mean) price, over(rep78)
+
+// Format labels and embed actual values directly above bars
+graph bar (mean) price, over(rep78) ///
+    title("Average Price by Repair Record") ///
+    ytitle("Mean Price (USD)") ///
+    blabel(total, format(%9.0f))
+
+// Contrast multiple structural aggregates across group features
+graph bar (mean) price (median) price, over(rep78) ///
+    legend(label(1 "Mean") label(2 "Median"))
+
+// Generate nested combinations of multiple categorical tiers
+graph bar (mean) price, over(rep78) over(foreign) ///
+    title("Mean Price by Repair Record and Origin")
+
+// Re-orient bar layout to horizontal axes settings
+graph hbar (mean) price, over(rep78)
+
+*------------------------------------------------------------------------------*
+* 3.4: Scatter Plots (Relationship Between Variables)
+*------------------------------------------------------------------------------*
+
+// Map two continuous numeric scales to a basic Cartesian scatter plot
+scatter mpg weight
+
+// Polish axes definitions and titles
+scatter mpg weight, ///
+    title("Fuel Efficiency vs. Vehicle Weight") ///
+    xtitle("Weight (lbs)") ///
+    ytitle("Miles per Gallon")
+
+// Superimpose a linear predictive OLS trend line over the scatter data
+scatter mpg weight || lfit mpg weight
+
+/* The '||' operator nests graph layers on a shared canvas */
+
+// Superimpose a non-linear quadratic trend line over the scatter data
+scatter mpg weight || qfit mpg weight
+
+// Format layer themes and legend markers
+scatter mpg weight || lfit mpg weight, ///
+    title("MPG vs Weight") ///
+    legend(label(1 "Observed") label(2 "Linear Fit"))
+
+// Partition scatter diagrams into distinct group matrices
+scatter mpg weight, by(foreign)
+
+// Group scatter points using distinct color codes
+scatter mpg weight, mcolor(foreign)
+
+// Explicitly plot customized layers with distinct symbols and keys
+twoway (scatter mpg weight if foreign==0, msymbol(circle) mcolor(blue)) ///
+       (scatter mpg weight if foreign==1, msymbol(triangle) mcolor(red)), ///
+       legend(label(1 "Domestic") label(2 "Foreign")) ///
+       title("MPG vs Weight by Origin")
+
+*------------------------------------------------------------------------------*
+* 3.5: Line Graphs (Trends Over Time/Ordered Variable)
+*------------------------------------------------------------------------------*
+
+// Load actual U.S. historical longitudinal life expectancy data
+sysuse uslifeexp.dta, clear
+
+// Line graph: Plots average U.S. life expectancy across years
+line le year, ///
+    title("U.S. Life Expectancy Trend") ///
+    xtitle("Year") ytitle("Life Expectancy (Years)")
+
+// Superimpose multiple trend sequences on a single canvas
+twoway (line le year, lcolor(black) lwidth(medium)) ///
+       (line le_w year, lcolor(blue) lpattern(dash)) ///
+       (line le_b year, lcolor(red) lpattern(shortdash)), ///
+       title("U.S. Life Expectancy Trends by Demographic") ///
+       xlabel(1900(20)2000) ///
+       legend(order(1 "Total" 2 "White" 3 "Black") position(6) cols(3)) ///
+       graphregion(color(white)) plotregion(color(white))
+
+/* CRITICAL STEP FOR STUDENTS: Reload auto.dta immediately after this chart 
+   so the downstream Section 3.6 can find 'price' and 'mpg' without breaking */
+sysuse auto.dta, clear
+
+*------------------------------------------------------------------------------*
+* 3.6: Combining Graphs
+*------------------------------------------------------------------------------*
+
+sysuse auto, clear
+
+// Cache multiple graphs in memory using distinct names
+histogram price, name(g1, replace) title("Price Distribution")
+histogram mpg, name(g2, replace) title("MPG Distribution")
+scatter mpg price, name(g3, replace) title("MPG vs Price")
+graph box price, over(foreign) name(g4, replace) title("Price by Origin")
+
+// Splice the cached visualizations into a unified panel grid
+graph combine g1 g2 g3 g4, ///
+    title("Auto Data Summary Visualizations") ///
+    note("Source: 1978 Automobile Data")
+
+*------------------------------------------------------------------------------*
+* 3.7: Saving Graphs
+*------------------------------------------------------------------------------*
+
+// Generate target plot
+scatter mpg weight, title("MPG vs Weight")
+
+// Export as an internal editable Stata format (.gph)
+graph save "mpg_weight.gph", replace
+
+// Export as standard image for presentations and reports (.png)
+graph export "mpg_weight.png", replace width(800)
+
+// Export as vector graphics for professional typesetting (.pdf)
+graph export "mpg_weight.pdf", replace
+
+// Export as Encapsulated PostScript for LaTeX manuscripts (.eps)
+graph export "mpg_weight.eps", replace
+
+*------------------------------------------------------------------------------*
+* 3.8: Graph Schemes (Overall Appearance)
+*------------------------------------------------------------------------------*
+
+// Identify active graphical layout schema parameters
+query graphics
+
+// Cycle across baseline visualization palettes
+scatter mpg weight, scheme(s1color)
+graph export "graph_s1color.png", replace
+
+scatter mpg weight, scheme(s2color)
+graph export "graph_s2color.png", replace
+
+// Apply a professional layout style matching news outlet themes
+scatter mpg weight, scheme(economist)
+graph export "graph_economist.png", replace
+
+// Standardize the preferred layout theme for the duration of the Stata session
+set scheme s1color
+
+display "Module 3 Part 1 Complete: Basic visualization mastered!"
+
+
+/*****************************************************************************
+* Module 4: Data Visualization - Part 2 (Advanced Customization)
+* Datasets: auto.dta, lifeexp.dta
+* Purpose: Publication-grade visualization formatting
+*****************************************************************************/
+
+sysuse auto.dta, clear
+
+*------------------------------------------------------------------------------*
+* 4.1: Advanced Scatter Plots with Customization
+*------------------------------------------------------------------------------*
+
+// Refine scatter plots using marker formatting, transparency, and padding options
+scatter mpg weight, ///
+    mcolor(navy) msize(medium) msymbol(diamond) ///
+    title("Fuel Efficiency vs Vehicle Weight", size(large) color(black)) ///
+    subtitle("1978 Automobile Data", size(medium)) ///
+    xtitle("Weight (pounds)", size(medium)) ///
+    ytitle("Miles per Gallon", size(medium)) ///
+    note("Source: Auto dataset", size(small)) ///
+    graphregion(color(white)) plotregion(color(white))
+
+/* Advanced layout options:
+    - mcolor: Modifies color palette and sets transparency rules
+    - msymbol: Directs geometric marker structural forms
+    - graphregion / plotregion: Strips background tint fills to crisp white
+*/
+
+// Assign contrasting marker geometries to group data splits
+scatter mpg weight, ///
+    mcolor(foreign) msize(medium) ///
+    msymbol(circle) ///
+    title("MPG vs Weight by Origin") ///
+    legend(label(1 "Domestic") label(2 "Foreign") position(6))
+
+*------------------------------------------------------------------------------*
+* 4.2: Fitted Lines with Confidence Intervals
+*------------------------------------------------------------------------------*
+
+// Superimpose an OLS fit line bundled with standard 95% confidence interval bands
+twoway (scatter mpg weight, mcolor(navy%50) msize(small)) ///
+       (lfit mpg weight, lcolor(red) lwidth(thick)) ///
+       (lfitci mpg weight, fcolor(red%20) lcolor(red%30)), ///
+       title("MPG vs Weight with 95% CI") ///
+       legend(order(1 "Observed" 2 "Fitted" 3 "95% CI"))
+
+/* Note: %50 and %20 assign explicit alpha opacity transparency codes */
+
+// Render independent regression slopes across different groups on a single axis
+twoway (scatter mpg weight if foreign==0, mcolor(blue)) ///
+       (scatter mpg weight if foreign==1, mcolor(red)) ///
+       (lfit mpg weight if foreign==0, lcolor(blue)) ///
+       (lfit mpg weight if foreign==1, lcolor(red)), ///
+       title("MPG vs Weight by Origin") ///
+       legend(order(1 "Domestic" 2 "Foreign" 3 "Fit: Domestic" 4 "Fit: Foreign"))
+
+*------------------------------------------------------------------------------*
+* 4.3: Adding Reference Lines and Labels
+*------------------------------------------------------------------------------*
+
+// Embed analytical horizontal and vertical intercept guidelines
+scatter mpg price, ///
+    yline(20, lcolor(red) lpattern(dash)) ///
+    xline(6000, lcolor(blue) lpattern(dash)) ///
+    title("MPG vs Price") ///
+    note("Dashed lines show median values")
+
+// Label regional sectors within coordinates
+scatter mpg weight, ///
+    text(40 2000 "High Efficiency", size(small)) ///
+    text(15 4500 "Low Efficiency", size(small)) ///
+    title("Fuel Efficiency Categories")
+
+// Explicitly anchor observation string names to scatter points
+scatter mpg weight, mlabel(make) mlabsize(tiny) ///
+    title("Cars Labeled by Make")
+
+// Isolate and append labels exclusively to outlier points
+scatter mpg weight, ///
+    mlabel(make) if mpg &gt; 35 | weight &gt; 4500 ///
+    mlabsize(vsmall) mlabposition(12) ///
+    title("Outlier Cars Labeled")
+
+*------------------------------------------------------------------------------*
+* 4.4: Advanced Two-Way Plots
+*------------------------------------------------------------------------------*
+
+// Generate a sorted connected line plot
+sort price
+twoway connected mpg price, ///
+    msymbol(circle) mcolor(navy) ///
+    lcolor(navy) lpattern(solid) ///
+    title("MPG by Price (Connected)")
+
+// Generate a shaded area distribution trend plot
+sysuse lifeexp, clear
+keep if country == "United States"
+
+twoway area lexp year, ///
+    color(blue%30) ///
+    title("US Life Expectancy Over Time") ///
+    ytitle("Life Expectancy (years)") ///
+    xtitle("Year")
+
+// Complex layered longitudinal tracking with multi-parameter axis scaling
+sysuse lifeexp, clear
+keep if inlist(country, "United States", "United Kingdom", "Germany")
+
+twoway (line lexp year if country=="United States", lcolor(blue) lwidth(thick)) ///
+       (line lexp year if country=="United Kingdom", lcolor(red) lwidth(thick)) ///
+       (line lexp year if country=="Germany", lcolor(green) lwidth(thick)), ///
+       title("Life Expectancy Trends", size(large)) ///
+       subtitle("Selected Countries, 1900-2000") ///
+       xtitle("Year") ytitle("Life Expectancy (years)") ///
+       legend(order(1 "USA" 2 "UK" 3 "Germany") position(11) ring(0)) ///
+       xlabel(1900(20)2000, grid) ///
+       ylabel(20(10)80, angle(0) grid) ///
+       graphregion(color(white)) plotregion(color(white))
+
+/* Axis options explained:
+    - position(11) ring(0): Places the legend box directly inside the plot field
+    - angle(0): Flips y-axis text to read horizontally
+*/
+
+*------------------------------------------------------------------------------*
+* 4.5: Dual Axis Plots
+*------------------------------------------------------------------------------*
+
+sysuse auto, clear
+
+// Collapse continuous fields down to mean aggregates across categories
+collapse (mean) mean_price=price (mean) mean_mpg=mpg, by(rep78)
+
+// Construct dual-axis diagrams overlaying disparate measurement metrics
+twoway (bar mean_price rep78, yaxis(1)) ///
+       (line mean_mpg rep78, yaxis(2) lwidth(thick) lcolor(red)), ///
+       ytitle("Mean Price (USD)", axis(1)) ///
+       ytitle("Mean MPG", axis(2)) ///
+       xtitle("Repair Record") ///
+       legend(order(1 "Price" 2 "MPG")) ///
+       title("Price and MPG by Repair Record")
+
+*------------------------------------------------------------------------------*
+* 4.6: Matrix Plots (Scatterplot Matrix)
+*------------------------------------------------------------------------------*
+
+sysuse auto, clear
+
+// Construct a pairwise multivariate scatter matrix
+graph matrix price mpg weight length, ///
+    half ///
+    title("Scatterplot Matrix") ///
+    msymbol(circle) msize(small) mcolor(navy%50)
+
+/* Note: 'half' drops redundant mirror duplicates above the main diagonal */
+
+*------------------------------------------------------------------------------*
+* 4.7: Categorical Variable Plots
+*------------------------------------------------------------------------------*
+
+// Render horizontal dot summary charts (preferred over busy bar graphs)
+graph dot (mean) price (mean) mpg, over(rep78) ///
+    title("Mean Price and MPG by Repair Record") ///
+    legend(label(1 "Price") label(2 "MPG"))
+
+// Unpack multi-tiered layered nested categorical matrices
+graph dot (mean) price, over(foreign) over(rep78) ///
+    marker(1, msymbol(circle) msize(medium)) ///
+    title("Mean Price by Repair Record and Origin")
+
+*------------------------------------------------------------------------------*
+* 4.8: Pie Charts
+*------------------------------------------------------------------------------*
+
+// Isolate binary indicators and extract structural percentage maps
+tab foreign, gen(origin_)
+egen total = total(origin_1)
+gen pct_domestic = origin_1/total * 100
+gen pct_foreign = origin_2/total * 100
+
+// Map basic pie chart proportions
+graph pie, over(foreign) ///
+    plabel(_all percent, format(%4.1f) size(medium)) ///
+    title("Distribution by Origin") ///
+    legend(label(1 "Domestic") label(2 "Foreign"))
+
+*------------------------------------------------------------------------------*
+* 4.9: Custom Color Schemes
+*------------------------------------------------------------------------------*
+
+sysuse auto, clear
+
+// Input custom corporate or academic RGB codes directly into color options
+scatter mpg weight, ///
+    mcolor("51 102 204") ///
+    title("Custom Color Scatter") ///
+    graphregion(color(white))
+
+// Map custom discrete hexadecimal colors manually across subset features
+twoway (scatter mpg weight if foreign==0, mcolor("228 26 28")) ///
+       (scatter mpg weight if foreign==1, mcolor("55 126 184")), ///
+       legend(label(1 "Domestic") label(2 "Foreign")) ///
+       title("Color-Coded Scatter")
+
+*------------------------------------------------------------------------------*
+* 4.10: Publication-Ready Figure
+*------------------------------------------------------------------------------*
+
+sysuse auto, clear
+
+// Discretize continuous weight tracking into strict ordinal factor definitions
+gen size_cat = 1 if weight &lt; 3000
+replace size_cat = 2 if weight &gt;= 3000 & weight &lt; 4000
+replace size_cat = 3 if weight &gt;= 4000 & !missing(weight)
+label define size_lbl 1 "Small" 2 "Medium" 3 "Large"
+label values size_cat size_lbl
+
+// Generate a publication-quality visualization with crisp layouts and clear keys
+twoway (scatter mpg price if size_cat==1, msymbol(circle) mcolor(green) msize(medium)) ///
+       (scatter mpg price if size_cat==2, msymbol(square) mcolor(blue) msize(medium)) ///
+       (scatter mpg price if size_cat==3, msymbol(triangle) mcolor(red) msize(medium)) ///
+       (lfit mpg price, lcolor(black) lwidth(medthick)), ///
+       title("Fuel Efficiency vs. Price by Vehicle Size", size(large) color(black)) ///
+       subtitle("1978 Automobile Data", size(medium)) ///
+       xtitle("Price (USD)", size(medium)) ///
+       ytitle("Fuel Efficiency (MPG)", size(medium)) ///
+       xlabel(, grid format(%6.0fc)) ///
+       ylabel(10(5)45, grid angle(0)) ///
+       legend(order(1 "Small (&lt;3000 lbs)" 2 "Medium (3000-4000 lbs)" ///
+                    3 "Large (&gt;4000 lbs)" 4 "Overall Trend") ///
+              position(6) cols(2) size(small)) ///
+       note("Source: Auto dataset. Linear fit across all vehicle sizes.", size(vsmall)) ///
+       graphregion(color(white)) plotregion(color(white)) ///
+       scheme(s1color)
+
+// Output the high-resolution vector and raster assets
+graph export "publication_figure.png", replace width(1200)
+graph export "publication_figure.pdf", replace
+
+display "Module 4 Complete: Advanced visualization mastered!"
+
+
+/*****************************************************************************
+* Module 5: Data Management - Part 1 (Creating and Modifying Variables)
+* Dataset: auto.dta
+* Purpose: Variable transformations, transformations, and indexing arithmetic
+*****************************************************************************/
+
+sysuse auto.dta, clear
+
+*------------------------------------------------------------------------------*
+* 5.1: Creating New Variables with GENERATE
+*------------------------------------------------------------------------------*
+
+// Apply linear arithmetic transformations
+generate price_1000 = price / 1000
+label variable price_1000 "Price in thousands of USD"
+
+list make price price_1000 in 1/10
+
+// Execute non-linear logarithmic and mathematical transformations
+generate log_price = log(price)
+generate sqrt_weight = sqrt(weight)
+generate price_squared = price^2
+
+// Logarithmic forms are heavily leveraged to track percentage elasticities
+describe log_price
+
+*------------------------------------------------------------------------------*
+* 5.2: Modifying Existing Variables with REPLACE
+*------------------------------------------------------------------------------*
+
+// Initialize a copy to safely experiment on before modifying values
+generate price_modified = price
+
+// Re-scale subsets conditionally using targeted criteria logical blocks
+replace price_modified = price_modified * 1.1 if foreign == 1
+list make price price_modified foreign in 1/10
+
+// Map a continuous range into discrete ordinal group codes conditionally
+generate price_category = .
+replace price_category = 1 if price &lt; 5000
+replace price_category = 2 if price &gt;= 5000 & price &lt; 10000
+replace price_category = 3 if price &gt;= 10000 & !missing(price)
+
+// Verify structural mapping alignment using conditional summaries
+tab price_category, missing
+summarize price if price_category == 1
+summarize price if price_category == 2
+summarize price if price_category == 3
+
+*------------------------------------------------------------------------------*
+* 5.3: Working with Strings
+*------------------------------------------------------------------------------*
+
+// Isolate string properties for modification
+generate make_copy = make
+describe make_copy
+
+// Isolate text substrings using automated spacing markers
+generate manufacturer = word(make, 1)
+list make manufacturer in 1/10
+
+// Count baseline character storage arrays inside text cells
+generate make_length = length(make)
+
+// Standardize text attributes into capitalized profiles
+generate make_upper = upper(make)
+
+// Standardize text attributes into lowercase profiles
+generate make_lower = lower(make)
+
+*------------------------------------------------------------------------------*
+* 5.4: Creating Categorical Variables
+*------------------------------------------------------------------------------*
+
+// Method 1: Iterative configuration using generate and replace parameters
+generate weight_cat = .
+replace weight_cat = 1 if weight &lt; 3000
+replace weight_cat = 2 if weight &gt;= 3000 & weight &lt; 4000
+replace weight_cat = 3 if weight &gt;= 4000 & !missing(weight)
+
+// Build a dictionary mapping numeric indicators to descriptive string labels
+label define weight_lbl 1 "Light" 2 "Medium" 3 "Heavy"
+label values weight_cat weight_lbl
+label variable weight_cat "Vehicle weight category"
+
+// Inspect raw structural values alongside their text descriptions
+tab weight_cat
+tab weight_cat, nolabel
+
+// Method 2: Execute immediate bracket recoding transformations
+recode weight (min/2999=1 "Light") (3000/3999=2 "Medium") ///
+              (4000/max=3 "Heavy"), gen(weight_cat2)
+
+tab weight_cat2
+
+// Method 3: Automatically slice variables into symmetric percentile chunks
+egen weight_quartile = cut(weight), group(4)
+tab weight_quartile
+
+*------------------------------------------------------------------------------*
+* 5.5: Creating Dummy (Binary) Variables
+*------------------------------------------------------------------------------*
+
+// Initialize structural indicators using logical thresholds
+generate is_expensive = 0
+replace is_expensive = 1 if price &gt; 8000
+
+// Initialize boolean variables instantly using comparative evaluations
+generate is_efficient = (mpg &gt; 25)
+
+// Expand multi-valued attributes into independent binary indicator matrices
+tab rep78, gen(rep_dummy_)
+describe rep_dummy_*
+
+// Isolate and map a clean binary mask configuration
+generate is_foreign = (foreign == 1)
+
+*------------------------------------------------------------------------------*
+* 5.6: Using EGEN (Extended Generate)
+*------------------------------------------------------------------------------*
+
+// Compute static sample global expectations across all observations
+egen mean_price = mean(price)
+
+// Compute conditional sub-population expectations grouped by category
+egen mean_price_by_foreign = mean(price), by(foreign)
+
+// Compute sample variances across records
+egen sd_price = sd(price)
+
+// Compute cumulative summary accumulations
+egen total_price = total(price)
+
+// Compute localized row averages horizontally across related measurements
+egen avg_dimensions = rowmean(length width headroom)
+
+// Transform continuous data variations into standardized Z-score variables
+egen price_std = std(price)
+summarize price price_std
+
+/* Note: Z-score metrics normalize variances down to exactly 0 mean and 1 SD */
+
+// Enumerate filled observations distributed across categorical codes
+egen count_by_foreign = count(price), by(foreign)
+
+// Map ordinal rank positions sorted by field parameters
+egen price_rank = rank(price)
+
+*------------------------------------------------------------------------------*
+* 5.7: Using BY Prefix with EGEN
+*------------------------------------------------------------------------------*
+
+// Track relative structural positions nested inside explicit group classifications
+sort foreign price
+by foreign: egen price_rank_within = rank(price)
+
+// Enumerate current structural record row indexes within specific groups
+by foreign: gen seq = _n
+
+/* Technical definitions:
+   - _n: Tracks active observation row index within current sub-sample
+   - _N: Houses global count boundary of records belonging to that sub-sample
+*/
+
+// Enumerate maximum structural sub-population limits inside specific groups
+by foreign: gen total_in_group = _N
+
+*------------------------------------------------------------------------------*
+* 5.8: Missing Value Management
+*------------------------------------------------------------------------------*
+
+// Run diagnostics on missing observation gaps
+misstable summarize
+
+// Flag missing data explicitly with a binary indicator variable
+generate rep78_missing = missing(rep78)
+
+// Impute missing spaces with the historical conditional median mark
+generate rep78_filled = rep78
+replace rep78_filled = 3 if missing(rep78)
+
+// Execute mean-imputation workflows and track them with clear flags
+generate rep78_imputed = rep78
+generate rep78_imputed_flag = 0
+summarize rep78
+replace rep78_imputed = r(mean) if missing(rep78)
+replace rep78_imputed_flag = 1 if missing(rep78)
+
+*------------------------------------------------------------------------------*
+* 5.9: Logical Operators and Complex Conditions
+*------------------------------------------------------------------------------*
+
+// Filter using conditional joint intersections (&)
+generate expensive_efficient = (price &gt; 8000 & mpg &gt; 25)
+
+// Filter using conditional alternative unions (|)
+generate extreme = (price &gt; 12000 | mpg &gt; 35)
+
+// Flip structural logical boolean states (!)
+generate not_foreign = !foreign
+
+// Evaluate structural cluster matching using string sets
+generate american_brand = inlist(manufacturer, "AMC", "Buick", "Cad.", ///
+    "Chev.", "Dodge", "Ford", "Linc.", "Merc.", "Olds", "Plym.", "Pont.")
+
+// Verify boundary tracking spans using numerical ranges
+generate mid_price = inrange(price, 5000, 10000)
+
+*------------------------------------------------------------------------------*
+* 5.10: Date Variables (Using Different Dataset)
+*------------------------------------------------------------------------------*
+
+// Build explicit sample arrays to practice working with dates
+clear
+set obs 100
+generate date_string = "2023-01-01"
+replace date_string = "2023-02-15" if _n &gt; 50
+
+// Translate string values into numeric epoch calendar integers
+generate date_numeric = date(date_string, "YMD")
+format date_numeric %td
+
+// Isolate calendar day, month, and year parts from numeric date integers
+generate year = year(date_numeric)
+generate month = month(date_numeric)
+generate day = day(date_numeric)
+
+// Map numeric indexes to standard days of the week
+generate dow = dow(date_numeric)
+label define dow_lbl 0 "Sun" 1 "Mon" 2 "Tue" 3 "Wed" 4 "Thu" 5 "Fri" 6 "Sat"
+label values dow dow_lbl
+
+tab dow
+
+display "Module 5 Part 1 Complete: Variable creation mastered!"
+
+
+/*****************************************************************************
+* Module 6: Data Management - Part 2 (Reshaping and Merging)
+* Datasets: bpwide.dta, bplong.dta, auto.dta
+* Purpose: Mastering reshape structural forms, relational joins, and updates
+*****************************************************************************/
+
+*------------------------------------------------------------------------------*
+* 6.1: Keeping and Dropping Variables
+*------------------------------------------------------------------------------*
+
+sysuse auto.dta, clear
+
+// Keep only a specific subset of variables, dropping all others
+preserve
+keep make price mpg weight foreign
+describe
+restore
+
+// Drop targeted variables, retaining all others
+preserve
+drop turn trunk gear_ratio
+describe
+restore
+
+// Batch drop columns using regular wildcard suffix matches
+preserve
+drop *ratio
+describe
+restore
+
+// Batch retain columns using regular wildcard suffix matches
+preserve
+keep make price mpg *78
+describe
+restore
+
+/* Note: preserve caches the dataset in memory; restore resets it back */
+
+*------------------------------------------------------------------------------*
+* 6.2: Keeping and Dropping Observations
+*------------------------------------------------------------------------------*
+
+// Retain exclusively rows matching exact conditional profiles
+preserve
+keep if foreign == 1
+count
+restore
+
+// Delete rows matching targeted condition rules
+preserve
+drop if price &gt; 10000
+count
+restore
+
+// Filter structural records across joint conditions
+preserve
+keep if foreign == 1 & mpg &gt; 25
+list make price mpg
+restore
+
+// Delete records that contain missing values in key analytical fields
+preserve
+drop if missing(rep78)
+count
+restore
+
+*------------------------------------------------------------------------------*
+* 6.3: Sorting Data
+*------------------------------------------------------------------------------*
+
+// Sort rows in ascending sequence order
+sort price
+
+// Sort rows sequentially across hierarchically nested groups
+sort foreign price
+
+// Sort rows in descending sequence order
+gsort -price
+
+// Combine sorting rules to handle both ascending and descending priorities
+gsort foreign -price
+
+*------------------------------------------------------------------------------*
+* 6.4: Duplicates Management
+*------------------------------------------------------------------------------*
+
+// Audit and report duplicate keys within tracking dimensions
+duplicates report make
+
+// List specific records that contain matching duplicate configurations
+duplicates list make
+
+// Generate flag metrics counting duplicate occurrences
+duplicates tag make, generate(dup_flag)
+
+// Purge duplicate records, retaining only the first instance
+preserve
+duplicates drop make, force
+count
+restore
+
+*------------------------------------------------------------------------------*
+* 6.5: Understanding Wide vs. Long Format
+*------------------------------------------------------------------------------*
+
+// Inspection of Wide Format structural frameworks
+sysuse bpwide.dta, clear
+describe
+list in 1/10
+
+// Inspection of Long Format structural frameworks
+sysuse bplong.dta, clear
+describe
+list in 1/20
+
+*------------------------------------------------------------------------------*
+* 6.6: Reshaping from Wide to Long
+*------------------------------------------------------------------------------*
+
+sysuse bpwide.dta, clear
+
+// Reshape wide format dimensions down into stacked longitudinal configurations
+reshape long bp_, i(patient) j(when) string
+
+describe
+list in 1/10
+
+*------------------------------------------------------------------------------*
+* 6.7: Reshaping from Long to Wide
+*------------------------------------------------------------------------------*
+
+sysuse bplong.dta, clear
+
+// Pivot stacked longitudinal rows back out into horizontal wide columns
+reshape wide bp, i(patient) j(when) string
+
+describe
+list in 1/5
+
+*------------------------------------------------------------------------------*
+* 6.8: More Complex Reshaping
+*------------------------------------------------------------------------------*
+
+// Build custom multi-period panels to practice advanced reshaping
+clear
+input patient year measurement1 measurement2
+1 2020 120 80
+1 2021 122 82
+1 2022 118 79
+2 2020 130 85
+2 2021 128 83
+2 2022 125 81
+end
+
+// Transform multi-variable tracking setups out into wide matrices
+reshape wide measurement1 measurement2, i(patient) j(year)
+list
+
+// Collapse wide multi-variable frameworks back down into longitudinal records
+reshape long measurement1_ measurement2_, i(patient) j(year)
+list
+
+*------------------------------------------------------------------------------*
+* 6.9: Appending Datasets (Stacking)
+*------------------------------------------------------------------------------*
+
+// Build two separate subset data sheets to practice append merges
+sysuse auto.dta, clear
+keep if foreign == 0
+keep make price mpg weight
+save "domestic.dta", replace
+
+sysuse auto.dta, clear
+keep if foreign == 1
+keep make price mpg weight
+save "foreign_cars.dta", replace
+
+// Append rows from another data file directly onto the base data sheet
+use "domestic.dta", clear
+append using "foreign_cars.dta"
+
+// Append rows while tracking data origin sources using a custom flag variable
+use "domestic.dta", clear
+append using "foreign_cars.dta", generate(source)
+label define source_lbl 0 "Domestic" 1 "Foreign"
+label values source source_lbl
+tab source
+
+*------------------------------------------------------------------------------*
+* 6.10: Merging Datasets
+*------------------------------------------------------------------------------*
+
+// Build relational mock databases to practice key matching joins
+sysuse auto.dta, clear
+keep make price
+save "auto_prices.dta", replace
+
+sysuse auto.dta, clear
+keep make mpg weight
+save "auto_performance.dta", replace
+
+// Execute a precise One-to-One (1:1) relational merge based on primary keys
+use "auto_prices.dta", clear
+merge 1:1 make using "auto_performance.dta"
+
+// Check tracking codes to verify successful row matches
+tab _merge
+list if _merge != 3
+drop _merge
+
+// Execute a Many-to-One (m:1) relational cross-sectional merge mapping states
+clear
+input str20 state state_gdp
+"California" 3000
+"Texas" 1800
+"New York" 1700
+end
+save "state_data.dta", replace
+
+clear
+input id str20 state income
+1 "California" 50000
+2 "California" 60000
+3 "Texas" 45000
+4 "Texas" 55000
+5 "New York" 70000
+end
+save "individual_data.dta", replace
+
+// Run mapping relational update matches
+use "individual_data.dta", clear
+merge m:1 state using "state_data.dta"
+tab _merge
+drop _merge
+
+*------------------------------------------------------------------------------*
+* 6.11: Different Types of Merges
+*------------------------------------------------------------------------------*
+
+// Execute a One-to-Many (1:m) structural matching hierarchy join
+clear
+input family_id parent_income
+1 80000
+2 95000
+3 70000
+end
+save "families.dta", replace
+
+clear
+input family_id child_age
+1 8
+1 12
+2 5
+2 9
+2 14
+3 6
+end
+save "children.dta", replace
+
+// Map macro records to micro child rows
+use "families.dta", clear
+merge 1:m family_id using "children.dta"
+tab _merge
+drop _merge
+
+*------------------------------------------------------------------------------*
+* 6.12: Merge Options and Best Practices
+*------------------------------------------------------------------------------*
+
+// Execute a relational merge that drops non-matching rows automatically
+use "auto_prices.dta", clear
+merge 1:1 make using "auto_performance.dta", keep(match) nogenerate
+
+// Enforce strict merge validation checks to protect data integrity
+use "auto_prices.dta", clear
+merge 1:1 make using "auto_performance.dta", assert(match)
+
+*------------------------------------------------------------------------------*
+* 6.13: Collapse (Aggregating Data)
+*------------------------------------------------------------------------------*
+
+sysuse auto.dta, clear
+
+// Collapse detailed micro records down into macro group summary means
+collapse (mean) avg_price=price (median) med_mpg=mpg (count) n=price, by(foreign)
+list
+
+display "Module 6 Complete: Data management mastered!"
+
+
+/*****************************************************************************
+* Module 7: Hypothesis Testing and T-Tests
+* Dataset: auto.dta, bpwide.dta
+* Purpose: Parametric and non-parametric statistical hypothesis inference
+*****************************************************************************/
+
+sysuse auto.dta, clear
+
+*------------------------------------------------------------------------------*
+* 7.1: One-Sample T-Test
+*------------------------------------------------------------------------------*
+
+// Conduct a classic two-sided one-sample t-test against a population norm
+ttest price == 6000
+
+// Conduct a directional one-sided upper-tail t-test
+ttest price == 6000, upper
+
+// Conduct a directional one-sided lower-tail t-test
+ttest price == 6000, lower
+
+*------------------------------------------------------------------------------*
+* 7.2: Two-Sample T-Test (Independent Groups)
+*------------------------------------------------------------------------------*
+
+// Test for differences in expectations across independent sub-populations
+ttest price, by(foreign)
+
+// Run Welch's t-test relaxation adjusting for unequal variances
+ttest price, by(foreign) unequal
+
+*------------------------------------------------------------------------------*
+* 7.3: Paired T-Test (Same Subjects, Two Conditions)
+*------------------------------------------------------------------------------*
+
+sysuse bpwide.dta, clear
+
+// Conduct a paired-sample t-test tracking longitudinal treatment changes
+ttest bp_before == bp_after
+
+// Verify mathematical equivalence using a single-sample test on differences
+generate bp_change = bp_after - bp_before
+ttest bp_change == 0
+
+*------------------------------------------------------------------------------*
+* 7.4: Understanding P-Values
+*------------------------------------------------------------------------------*
+
+sysuse auto.dta, clear
+ttest price, by(foreign)
+
+/* Core decision rules:
+   - p-value tracks standard probability of observing sample parameters under H0
+   - alpha thresholds dictate critical cutoffs for statistical rejection
+*/
+
+*------------------------------------------------------------------------------*
+* 7.5: Confidence Intervals
+*------------------------------------------------------------------------------*
+
+// Extract formal point bounds for sample tracking averages
+mean price
+mean price, level(99)
+
+// Contrast estimation bounds across specific target partitions
+mean price, over(foreign)
+
+*------------------------------------------------------------------------------*
+* 7.6: Effect Size
+*------------------------------------------------------------------------------*
+
+// Manually extract parameters to compute standardized Cohen's d magnitudes
+summarize price if foreign == 0
+scalar mean0 = r(mean)
+scalar sd0 = r(sd)
+scalar n0 = r(N)
+
+summarize price if foreign == 1
+scalar mean1 = r(mean)
+scalar sd1 = r(sd)
+scalar n1 = r(N)
+
+// Compute the combined pooled standard deviation metric
+scalar pooled_sd = sqrt(((n0-1)*sd0^2 + (n1-1)*sd1^2)/(n0+n1-2))
+
+// Isolate the final absolute standardized effect distance coefficient
+scalar cohens_d = (mean1 - mean0) / pooled_sd
+display "Cohen's d = " cohens_d
+
+*------------------------------------------------------------------------------*
+* 7.7: Testing Assumptions
+*------------------------------------------------------------------------------*
+
+// Graphic evaluation using distribution normality mapping plots
+histogram price, normal name(hist_price, replace)
+qnorm price, name(qnorm_price, replace)
+
+// Execute the formal Shapiro-Wilk statistical test for normality
+swilk price
+
+// Evaluate variances for homogeneity across independent populations
+sdtest price, by(foreign)
+
+*------------------------------------------------------------------------------*
+* 7.8: Non-Parametric Alternative: Rank-Sum Test
+*------------------------------------------------------------------------------*
+
+// Run the distribution-free Wilcoxon-Mann-Whitney rank-sum test
+ranksum price, by(foreign)
+
+*------------------------------------------------------------------------------*
+* 7.9: Practical Significance vs Statistical Significance
+*------------------------------------------------------------------------------*
+
+// Evaluate whether small statistical errors carry meaningful practical relevance
+tabstat price, by(foreign) statistics(mean)
+
+display "Module 7 Complete: Hypothesis testing mastered!"
+
+
+/*****************************************************************************
+* Module 8: Regression Analysis - Part 1 (Simple and Multiple Regression)
+* Dataset: auto.dta
+* Purpose: OLS modeling estimation, verification, and output exports
+*****************************************************************************/
+
+sysuse auto.dta, clear
+
+*------------------------------------------------------------------------------*
+* 8.1: Simple Linear Regression
+*------------------------------------------------------------------------------*
+
+// Run a bivariate baseline Ordinary Least Squares (OLS) regression model
+regress mpg weight
+
+// Retrieve model estimation returns held in hidden system memory
+ereturn list
+display "R-squared: " e(r2)
+
+*------------------------------------------------------------------------------*
+* 8.2: Predicted Values and Residuals
+*------------------------------------------------------------------------------*
+
+// Map systematic point predictions based on OLS structural parameters
+predict mpg_hat, xb
+
+// Isolate remaining stochastic error residual deviations
+predict resid, residuals
+
+// Construct model validation diagnostic plots to verify fit stability
+scatter resid mpg_hat, yline(0) title("Residuals vs Fitted Values")
+
+*------------------------------------------------------------------------------*
+* 8.3: Multiple Regression
+*------------------------------------------------------------------------------*
+
+// Run multivariate OLS regressions to control for confounding factors
+regress mpg weight foreign
+
+// Check linear association configurations across distinct predictors
+correlate weight length
+
+*------------------------------------------------------------------------------*
+* 8.4: Categorical Predictors (Factor Variables)
+*------------------------------------------------------------------------------*
+
+// Handle discrete multi-category items using factor variable expansion syntax
+regress price i.rep78
+
+// Manually reset reference baselines to clear target groups
+regress price ib3.rep78
+
+*------------------------------------------------------------------------------*
+* 8.5: Interaction Terms
+*------------------------------------------------------------------------------*
+
+// Estimate multi-factor structural slope deviations using interactive terms
+regress mpg weight##foreign
+
+// Run a formal Wald test to verify joint cross-factor slope parameter effects
+test weight#foreign
+
+// Extract point prediction tracks across interactive cross-slopes
+margins foreign, at(weight=(2000(500)4500))
+marginsplot, title("Predicted MPG by Weight and Origin")
+
+*------------------------------------------------------------------------------*
+* 8.6: Standardized Coefficients (Beta Coefficients)
+*------------------------------------------------------------------------------*
+
+// Request standardized beta weights to rank structural predictor impact
+regress mpg weight length, beta
+
+*------------------------------------------------------------------------------*
+* 8.7: Model Comparison
+*------------------------------------------------------------------------------*
+
+// Systematically store structural variations of regression specifications
+quietly regress mpg weight
+estimates store model1
+
+quietly regress mpg weight foreign
+estimates store model2
+
+quietly regress mpg weight foreign length
+estimates store model3
+
+// Contrast nested specifications side-by-side in a single summary grid
+estimates table model1 model2 model3, stats(N r2 r2_a rmse) star(0.10 0.05 0.01)
+
+*------------------------------------------------------------------------------*
+* 8.8: Presenting Regression Results
+*------------------------------------------------------------------------------*
+
+// Export publication-ready regression tables with standard errors and stars
+esttab model1 model2 model3, b(3) se(3) r2 ar2 ///
+    star(* 0.10 ** 0.05 *** 0.01) ///
+    title("Regression Results: Determinants of MPG")
+
+display "Module 8 Part 1 Complete: Regression fundamentals mastered!"
+
+
+/*****************************************************************************
+* Module 9: Advanced Regression Topics
+* Dataset: auto.dta
+* Purpose: OLS specification checks, robust errors, and diagnostics
+*****************************************************************************/
+
+sysuse auto.dta, clear
+
+*------------------------------------------------------------------------------*
+* 9.1: Regression Assumptions
+*------------------------------------------------------------------------------*
+
+// Fit reference model to test econometric assumptions
+regress price mpg weight foreign
+
+*------------------------------------------------------------------------------*
+* 9.2: Testing for Normality of Residuals
+*------------------------------------------------------------------------------*
+
+predict resid_m9, residuals
+
+// Graph residual tracking layouts to spot structural distribution departures
+qnorm resid_m9, title("Q-Q Plot of Residuals")
+
+// Run structural Shapiro-Wilk statistical evaluations on error tracks
+swilk resid_m9
+
+*------------------------------------------------------------------------------*
+* 9.3: Testing for Heteroskedasticity
+*------------------------------------------------------------------------------*
+
+// Conduct the Breusch-Pagan Lagrange Multiplier test for constant variance
+estat hettest
+
+// Conduct White's general unconstrained variance test
+estat imtest, white
+
+*------------------------------------------------------------------------------*
+* 9.4: Robust Standard Errors
+*------------------------------------------------------------------------------*
+
+// Apply Huber-White sandwich robust standard errors to correct for heteroskedasticity
+regress price mpg weight foreign, robust
+
+*------------------------------------------------------------------------------*
+* 9.5: Detecting Outliers and Influential Observations
+*------------------------------------------------------------------------------*
+
+// Generate standardized internally Studentized outlier measurement metrics
+predict rstudent, rstudent
+
+// Calculate Leverage metrics to identify unusual configurations of predictors
+predict leverage, leverage
+
+// Calculate Cook's Distance to evaluate observation influence on coefficients
+predict cooksd, cooksd
+
+*------------------------------------------------------------------------------*
+* 9.6: Dealing with Influential Observations
+*------------------------------------------------------------------------------*
+
+// Re-estimate regression equations dropping highly influential records
+scalar cook_cut = 4/_N
+regress price mpg weight foreign if cooksd &lt;= cook_cut
+
+*------------------------------------------------------------------------------*
+* 9.7: Multicollinearity Detection
+*------------------------------------------------------------------------------*
+
+// Extract Variance Inflation Factors (VIF) to detect multicollinearity
+regress price mpg weight length displacement foreign
+estat vif
+
+*------------------------------------------------------------------------------*
+* 9.8: Non-Linearity: Polynomial Terms
+*------------------------------------------------------------------------------*
+
+// Estimate polynomial relationships using quadratic transformation metrics
+generate weight_sq = weight^2
+regress price weight weight_sq foreign
+
+// Chart non-linear predictive paths across structural points
+margins, at(weight=(2000(100)5000))
+marginsplot, title("Predicted Price by Weight (Quadratic)")
+
+*------------------------------------------------------------------------------*
+* 9.9: Specification Tests
+*------------------------------------------------------------------------------*
+
+// Conduct Ramsey's RESET specification test for omitted functional forms
+regress price mpg weight foreign
+estat ovtest
+
+*------------------------------------------------------------------------------*
+* 9.10: Prediction Intervals
+*------------------------------------------------------------------------------*
+
+// Extract forecasting standard errors to map individual prediction limits
+predict yhat_pi, xb
+predict se_pred, stdp
+generate pi_lower = yhat_pi - 1.96*se_pred
+generate pi_upper = yhat_pi + 1.96*se_pred
+
+display "Module 9 Complete: Advanced regression diagnostics mastered!"
+
+
+/*****************************************************************************
+* Module 10: Panel Data Analysis (Introduction)
+* Dataset: Simulated Longitudinal Panels & nlsw88.dta
+* Purpose: Panel declarations, tracking variation, and fixed/random effects
+*****************************************************************************/
+
+*------------------------------------------------------------------------------*
+* 10.1: Understanding Panel Data Structure
+*------------------------------------------------------------------------------*
+clear
+set seed 12345
+set obs 500
+
+*------------------------------------------------------------------------------*
+* 10.2: Creating Simulated Panel Data
+*------------------------------------------------------------------------------*
+
+// Generate cross-sectional IDs and balanced multi-period time matrices
+generate id = ceil(_n/5)
+bysort id: generate time = _n
+
+generate ability = rnormal(5, 2)
+bysort id: replace ability = ability[1]
+generate experience = time - 1
+generate training = (runiform() &lt; 0.3)
+generate fixed_effect = rnormal(10, 3)
+bysort id: replace fixed_effect = fixed_effect[1]
+
+// Build final panel outcome variables
+generate wage = 20 + 0.5*experience + 3*training + fixed_effect + rnormal(0,2)
+
+*------------------------------------------------------------------------------*
+* 10.3: Declaring Panel Data
+*------------------------------------------------------------------------------*
+
+// Declare the cross-sectional and time dimensions of the panel to Stata
+xtset id time
+
+// Inspect panel structural balance configurations
+xtdescribe
+
+// Decompose variance components into Within and Between tracks
+xtsum wage experience training
+
+*------------------------------------------------------------------------------*
+* 10.4: Pooled OLS (Ignoring Panel Structure)
+*------------------------------------------------------------------------------*
+
+// Estimate baseline unconstrained pooled OLS models
+regress wage experience training
+
+*------------------------------------------------------------------------------*
+* 10.5: Fixed Effects Regression
+*------------------------------------------------------------------------------*
+
+// Estimate within-person changes using the Panel Fixed Effects estimator
+xtreg wage experience training, fe
+estimates store fe_model
+
+*------------------------------------------------------------------------------*
+* 10.6: Random Effects Regression
+*------------------------------------------------------------------------------*
+
+// Estimate generalized panel tracks using the Random Effects estimator
+xtreg wage experience training, re
+estimates store re_model
+
+*------------------------------------------------------------------------------*
+* 10.7: Hausman Test (FE vs. RE)
+*------------------------------------------------------------------------------*
+
+// Run the Hausman specification test to evaluate FE vs. RE models
+hausman fe_model re_model
+
+*------------------------------------------------------------------------------*
+* 10.8: Comparing Models
+*------------------------------------------------------------------------------*
+
+// Contrast pooled, random effects, and fixed effects outputs side-by-side
+esttab pooled re_model fe_model, b(3) se(3) r2 mtitles("Pooled" "RE" "FE")
+
+*------------------------------------------------------------------------------*
+* 10.9: Time-Series Operators with Panel Data
+*------------------------------------------------------------------------------*
+
+// Leverage lag, lead, and difference tracking operators on active panels
+generate wage_lag = L.wage
+generate wage_diff = D.wage
+generate wage_lead = F.wage
+
+*------------------------------------------------------------------------------*
+* 10.10: Panel Data with Time Effects
+*------------------------------------------------------------------------------*
+
+// Estimate macro time shocks using multi-period dummy time indicators
+xtreg wage experience training i.time, fe
+
+*------------------------------------------------------------------------------*
+* 10.11: Practical Example with NLSW88
+*------------------------------------------------------------------------------*
+
+sysuse nlsw88.dta, clear
+encode industry, generate(ind_id)
+generate year = 1988
+xtset ind_id year
+
+// Run an operational within-industry summary check
+xtreg wage hours ttl_exp tenure married, fe
+
+*------------------------------------------------------------------------------*
+* 10.12: When to Use Panel Data Methods
+*------------------------------------------------------------------------------*
+display "Training Course Complete: All modules executed successfully!"</code></pre>
+              </div>
+            </div>
+
+            <!-- TEMPLATE CARD 2: PLFS Cleaning and Labor Indicators (plfs_cleaning.do) -->
+            <div class="border border-sky-500/20 bg-sky-500/[0.01] dark:bg-sky-500/[0.02] rounded-xl p-6 transition-all hover:border-sky-500/40">
+              <div class="collapse-btn flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div class="flex items-start gap-4">
+                  <div class="p-3 bg-sky-500/10 text-sky-600 dark:text-sky-400 rounded-xl mt-1">
+                    <i class="fas fa-database text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-serif text-xl font-semibold text-gray-900 dark:text-white tracking-wide group-hover:text-sky-500">
+                      plfs_cleaning.do — PLFS 2023-24: Data Ingestion & Core Labor Metrics
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-light mt-1 max-w-3xl">
+                      A complete data preparation and management workflow for processing India's Periodic Labour Force Survey microdata. Handles text record parsing using layout files, survey design multipliers, relational data merging, and macro metric calculations (LFPR, WPR, UR, NEET).
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 self-end md:self-center">
+                  <span class="text-xs font-mono px-2.5 py-1 bg-sky-500/10 text-sky-600 dark:text-sky-400 rounded">Data Prep</span>
+                  <i class="fas fa-chevron-down text-sky-500 transition-transform duration-300"></i>
+                </div>
+              </div>
+
+              <div class="collapse-content mt-6 relative group">
+                <div class="mb-4 p-4 bg-sky-500/5 border border-sky-500/10 rounded-lg text-xs text-gray-600 dark:text-gray-400 flex items-center gap-3">
+                  <i class="fas fa-info-circle text-sky-500 text-sm"></i>
+                  <span><strong>Survey Weight Rule:</strong> Generates <code class="font-mono bg-sky-500/10 px-1 rounded">comb_wt</code> by correcting sub-sample multipliers (<code class="font-mono bg-sky-500/10 px-1 rounded">mult/100</code> or <code class="font-mono bg-sky-500/10 px-1 rounded">mult/200</code>) to cleanly scale findings to national population estimates.</span>
+                </div>
+                <button class="copy-btn absolute top-16 right-3 z-10 text-xs border border-gray-400 bg-gray-200 dark:border-white/20 dark:bg-white/10 px-3 py-1.5 rounded transition-colors opacity-0 group-hover:opacity-100">Copy Script</button>
+                <pre><code class="language-stata">/*******************************************************************************
+  PLFS 2023-24 DATA CLEANING AND ESTIMATION SCRIPT
+  Purpose: To ingest, merge, and analyze household and individual-level data 
+           from the Periodic Labour Force Survey (PLFS).
+           Calculates WPR, LFPR, and UR across different status frameworks.
+*******************************************************************************/
+
+/* =============================================================================
+   PHASE 1: PREPARING THE HOUSEHOLD-LEVEL DATASET
+   ============================================================================= */
+/* I am setting working directory in simple way */
+cd "`Path'"
+
+/* Step 1.1: Import raw text data using the dictionary file. 
+   PLFS provides fixed-width text files, so the dictionary tells Stata 
+   where each variable starts and ends.
+*/
+infile using "hhdct.txt", using("HHV1.TXT")
+gen round=9 // This is my personal survey round no. as I have appended previous rounds of PLFS and EU surveys as well. You can ignore that.
+save "plfs_hh.dta", replace
+clear
+
+/* Import individual level data to be used in Phase 2 */
+infile using "dct_pl.txt", using("PERV1.TXT")
+gen survey=2023
+save "plfs_ind.dta", replace
+
+use "plfs_hh.dta"
+
+/* Step 1.2: Generate unique household ID.
+   Because PLFS does not provide a single unique ID, we must concatenate 
+   the survey design variables to create one. This is crucial for merging later.
+*/
+egen hhid = concat(quarter visit fsu hg sss hh_no)
+label var hhid "Unique household ID - Generated"
+
+/* Step 1.3: Apply Survey Multipliers (Weights).
+   PLFS uses a multi-stage stratified design. To make our sample represent the 
+   actual Indian population, we apply weights. If the two sub-samples (nss and nsc) 
+   are combined, we divide by 100. If evaluated separately, we divide by 200.
+*/
+gen comb_wt = mult/100 if nss == nsc
+replace comb_wt = mult/200 if nss != nsc
+// is 095. We have corrected this misclassification.
+
+/* Step 1.4: Assign value labels to categorical variables for readability */
+cap label drop response_code
+label define response_code 1 "co-operative and capable" 2 "co-operative but not capable" 3 "busy" 4 "reluctant" 9 "others"
+label values response_code response_code
+
+cap label drop survey_code
+label define survey_code 1 "original" 2 "substitute" 3 "casualty" 
+label values survey_code survey_code
+
+cap label drop subs_reason
+label define subs_reason 1 "informant busy" 2 "members away from home" 3 "informant non-cooperative" 9 "others"
+label values subs_reason subs_reason
+
+/* slightly different codes for urban areas */
+cap label drop hh_type
+recode hh_type 1=6 2=7 3=8 9=10 if sector==2
+label define hh_type 1 "rural: self-employed in agriculture" 2 "rural: self-employed in non-agriculture" 3 "rural: regular wage/salary earning" 4 "rural: casual labour in agriculture" 5 "rural: casual labour in non-agriculture" 6 "urban: self-employed" 7 "urban: regular wage/salary earning" 8 "urban: casual labour" 9 "rural: others" 10 "urban: others" 
+label values hh_type hh_type
+
+cap label drop religion
+label define religion 1 "Hinduism" 2 "Islam" 3 "Christianity" 4 "Sikhism" 5 "Jainism" 6 "Buddhism" 7 "Zoroastrianism" 9 "others"
+label values religion religion
+
+cap label drop social_group
+label define social_group 1 "scheduled tribe" 2 "scheduled caste" 3 "other backward class" 9 "others"
+label values social_group social_group
+
+cap label drop sector
+label define sector 1 "Rural" 2 "Urban"
+label values sector sector
+
+order hhid state
+save "plfs_hh.dta", replace
+clear
+
+
+/* =============================================================================
+   PHASE 2: PREPARING THE INDIVIDUAL-LEVEL DATASET
+   ============================================================================= */
+use "plfs_ind.dta"
+
+/* Step 2.1: Recreate household ID and generate unique Person ID.
+   We add the Person Serial Number (per_sn) to the household ID. 
+*/
+egen hhid = concat(quarter visit fsu hg sss hh_no)
+label var hhid "Unique household ID - Generated"
+
+egen pid = concat(quarter visit fsu hg sss hh_no per_sn)
+label var pid "unique person ID - Generated"
+ 
+/* Step 2.2: Data Integrity Check.
+   'isid' checks if 'pid' uniquely identifies every row. If this throws an error, 
+   there are duplicates in the data that need fixing before proceeding.
+*/
+isid pid
+
+/* Step 2.3: Destring variables.
+   Certain variables like wages often import as strings (text). We must convert 
+   them to numeric so Stata can perform calculations on them.
+*/
+destring ERSW_1, replace
+destring ERSW_2, replace
+destring nss, replace
+destring nsc, replace
+
+/* Step 2.4: Assign value labels to individual demographic and activity codes */
+label define rel_head 1 "self" 2 "spouse of head" 3 "married child" 4 "spouse of married child" 5 "unmarried child" 6 "grandchild" 7 "father/mother/father-in-law/mother-in-law" 8 "brother/sister/brother-in-law/ sister-in-law/other relatives" 9 "servants/employees/other non-relatives"
+label values rel_head rel_head
+
+label define sex 1 "male" 2 "female" 3 "third gender"
+label values sex sex
+
+label define marital_status 1 "never married" 2 " currently married" 3 "widowed" 4 "divorced/separated"
+label values marital_status marital_status
+
+label  define gen_edu 01 "not literate" 02 "literate without formal schooling: EGS/ NFEC/ AEC" 03 "literate without formal schooling: TLC" 04 "literate without formal schooling: others" 05 "literate: below primary" 06 "literate: primary"07 "literate: middle" 08 "literate: secondary" 10 "literate: higher secondary" 11 "literate: diploma/certificate course" 12 "literate: graduate" 13 "literate: postgraduate and above" 
+label values gen_edu gen_edu
+
+label define tech_edu 01 "no technical education" 02 "technical degree in: agriculture" 03 "technical degree in: engineering/ technology" 04 "technical degree in: medicine" 05 "technical degree in: crafts" 06 "technical degree in: other subjects" 07 "diploma or certificate (below graduate level) in: agriculture" 08 "diploma or certificate (below graduate level) in: engineering/technology" 09 "diploma or certificate (below graduate level) in: medicine" 10 "diploma or certificate (below graduate level) in: crafts" 11 "diploma or certificate (below graduate level) in: other subjects" 12 "diploma or certificate (graduate and above level) in: agriculture" 13 "diploma or certificate (graduate and above level) in: engineering/technology" 14 "diploma or certificate (graduate and above level) in: medicine" 15 "diploma or certificate (graduate and above level) in: crafts" 16 "diploma or certificate (graduate and above level) in: other subjects"
+label values tech_edu tech_edu
+
+label define curr_attnd 01 "never attended: school too far" 02 "never attended: to supplement household income" 03 "never attended: education not considered necessary" 04 "never attended: to attend domestic chores" 05 "never attended: others" 11 "ever attended but currently not attending: school too far" 12 "ever attended but currently not attending: to supplement household income" 13 "ever attended but currently not attending:education not considered necessary" 14 "ever attended but currently not attending: to attend domestic chores" 15 "ever attended but currently not attending: others" 21 "currently attending in: EGS/ NFEC/ AEC" 22 "currently attending in: TLC" 23 "currently attending in: pre-primary (nursery/ Kindergarten, etc.)" 24 "currently attending in: primary (class I to IV/ V)" 25 "currently attending in: middle" 26 "currently attending in: secondary" 27 "currently attending in: higher secondary" 28 "graduate in: agriculture" 29 "graduate in: engineering/ technology" 30 "graduate in: medicine" 31 "graduate in: other subjects" 32 "post graduate and above" 33 "diploma or certificate (below graduate level) in: agriculture" 34 "diploma or certificate (below graduate level) in: engineering/ technology" 35 "diploma or certificate (below graduate level) in: medicine" 36 "diploma or certificate (below graduate level) in: crafts" 37 "diploma or certificate (below graduate level) in: other subjects" 38 "diploma or certificate (graduate level) in: agriculture" 39 "diploma or certificate (graduate level) in: engineering/ technology" 40 "diploma or certificate (graduate level) in: medicine" 41 "diploma or certificate (graduate level) in: crafts" 42 "diploma or certificate (graduate level) in: other subjects" 43 "diploma or certificate in post graduate and above level"
+label values curr_attnd curr_attnd
+
+label define voc_train 1 "yes: received formal vocational/technical training-1" 2 "received vocational/technical training other than formal vocational/technical training: hereditary" 3 "received vocational/technical training other than formal vocational/technical training: self-leanring" 4 "received vocational/technical training other than formal vocational/technical training: learning on the job" 5 "received vocational/technical training other than formal vocational/technical training: others" 6 "did not receive any vocational/technical training"
+label values  voc_train voc_train
+
+label define train_compl 1 "yes" 2 "no"
+label values train_compl train_compl
+
+label define train_field 01 "aerospace and aviation" 02 "agriculture, non-crop based agriculture, food processing" 03 "allied manufacturinggems and jewellery, leather, rubber, furniture and fittings, printing" 04 "artisan/craftsman/handicraft/creative arts and cottage based production" 05 "automotive" 06"beauty and wellness" 07 "chemical engineering, hydrocarbons, chemicals and petrochemicals" 08 "civil engineering- construction, plumbing, paints and coatings" 09 "electrical, power and electronics" 10 "healthcare and life sciences" 11 "hospitality and tourism" 12 "iron and steel, mining, earthmoving and infra building" 13 "IT-ITeS" 14 "logistics" 15 "mechanical engineeringcapital goods, strategic manufacturing" 16 "media-journalism, mass communication and entertainment" 17 "office and business related work" 18 "security" 19 "telecom" 20 "textiles and handlooms, apparels" 21 "work related to childcare, nutrition, pre-school and crèche" 99 "other"
+label values train_field train_field
+
+label define dur_train 1 "less than 3 months" 2 "3 months or more but less than 6 months" 3 "6 months or more but less than 12 months" 4 "12 months or more but less than 18 months" 5 "18 months or more but less than 24 months" 6 "24 months or more"
+label values dur_train dur_train
+
+label define type_train 1 "on the job" 2 "other than on the job: part time" 3 "other than on the job: full time"
+label values type_train type_train
+
+label define source_fund_train 1 "govt" 2 "own funding" 9 "others"
+label values source_fund_train source_fund_train
+
+label define prnc_status_code 11 "worked in h.h. enterprise (self-employed): own account worker" 12 "worked in h.h. enterprise (self-employed): employer" 21 "worked in h.h. enterprise (self-employed): worked as helper in h.h. enterprise (unpaid family worker)" 31 "worked as regular salaried/ wage employee" 41 "worked as casual wage labour: in public works" 51 "worked as casual wage labour: in other types of work" 81 "did not work but was seeking and/or available for work" 91 "attended educational institution" 92 "attended domestic duties only" 93 "attended domestic duties and was also engaged in fre collection of goods (vegetables, roots, firewood, cattle feed, etc.), sewing, tailoring, weaving, etc. for household use" 94 "rentiers, pensioners , remittance recipients, etc." 95 "not able to work due to disability" 97 "others (including begging, prostitution, etc.)" 99 "children aged 0-4 yrs"
+label values prnc_status_code prnc_status_code
+
+label define subs_cap 1 "yes" 2 "no"
+label value subs_cap subs_cap
+
+label define prnc_work_loc 10 "workplace in rural areas and located in: own dwelling unit" 11 "workplace in rural areas and located in: structure attached to own dwelling unit" 12 "workplace in rural areas and located in: open area adjacent to own dwelling unit" 13 "workplace in rural areas and located in:detached structure adjacent to own dwelling unit" 14 "workplace in rural areas and located in: own enterprise/unit/office/shop but away from own dwelling" 15 "workplace in rural areas and located in: employer's dwelling unit" 16 "workplace in rural areas and located in: employer's enterprise/unit/office/shop but outside employer's dwelling" 17 "workplace in rural areas and located in: street with fixed location" 18 "workplace in rural areas and located in:construction site" 19 "workplace in rural areas and located in: others" 20 "workplace in urban areas and located in: own dwelling unit" 21 "workplace in urban areas and located in: structure attached to own dwelling unit" 22 "workplace in urban areas and located in: open area adjacent to own dwelling unit" 23 "workplace in urban areas and located in: detached structure adjacent to own dwelling unit" 24 "workplace in urban areas and located in: own enterprise/unit/office/shop but away from own dwelling" 25 "workplace in urban areas and located in: employer's dwelling unit" 26 "workplace in urban areas and located in: employer's enterprise/unit/office/shop but outside employer's dwelling" 27 "workplace in urban areas and located in: street with fixed location" 28 "workplace in urban areas and located in: construction site" 29 "workplace in urban areas and located in: others" 99 "no fixed workplace"
+label values prnc_work_loc prnc_work_loc
+
+label define prnc_ent_code 01 "proprietary: male" 02 "proprietary: female" 03 "partnership: with members from same household" 04 "partnership: with members from different household" 05 "Government/local body" 06 "Public Sector Enterprises" 07 "Autonomous Bodies" 08 "Public/Private limited company" 10"Co-operative societies" 11 "trust/other non-profit institutions" 12 "employer's households(i.e., private households employing maid servant, watchman, cook, etc.)" 19 "others"
+label values prnc_ent_code prnc_ent_code 
+
+label define prnc_workers 1 "less than 6" 2 "6 and above but less than 10" 3 "10 and above but less than 20" 4 "20 and above" 9 "not known"
+label values prnc_workers prnc_workers
+
+label define prnc_job_cntrct 1 "no written job contract" 2 "written job contract: for 1 year or less" 3 "written job contract: more than 1 year to 3 years" 4 "written job contract: more than 3 years" 
+label values prnc_job_cntrct prnc_job_cntrct
+
+label define prnc_paid_leave 1 "yes" 2 "no"
+label values prnc_paid_leave prnc_paid_leave
+
+label define prnc_ssb 1 "eligible for: only PF/ pension (i.e., GPF, CPF, PPF, pension, etc.)" 2 "eligible for: only gratuity" 3 "eligible for: only health care & maternity benefits" 4 "eligible for: only PF/ pension and gratuity" 5 "eligible for: only PF/ pension and health care & maternity benefits" 6 "eligible for: only gratuity and health care & maternity benefits" 7 "eligible for: PF/ pension, gratuity, health care & maternity benefits" 8 "not eligible for any of above social security benefits" 9 "not known" 
+label values prnc_ssb prnc_ssb
+
+label define subs_status_code 11 "worked in h.h. enterprise (self-employed): own account worker" 12 "worked in h.h. enterprise (self-employed): employer" 21 "worked in h.h. enterprise (self-employed): worked as helper in h.h. enterprise (unpaid family worker)" 31 "worked as regular salaried/ wage employee" 41 "worked as casual wage labour: in public works" 51 "worked as casual wage labour: in other types of work"
+label values subs_status_code subs_status_code
+
+label define subs_work_loc 10 "workplace in rural areas and located in: own dwelling unit" 11 "workplace in rural areas and located in: structure attached to own dwelling unit" 12 "workplace in rural areas and located in: open area adjacent to own dwelling unit" 13 "workplace in rural areas and located in:detached structure adjacent to own dwelling unit" 14 "workplace in rural areas and located in: own enterprise/unit/office/shop but away from own dwelling" 15 "workplace in rural areas and located in: employer's dwelling unit" 16 "workplace in rural areas and located in: employer's enterprise/unit/office/shop but outside employer's dwelling" 17 "workplace in rural areas and located in: street with fixed location" 18 "workplace in rural areas and located in:construction site" 19 "workplace in rural areas and located in: others" 20 "workplace in urban areas and located in: own dwelling unit" 21 "workplace in urban areas and located in: structure attached to own dwelling unit" 22 "workplace in urban areas and located in: open area adjacent to own dwelling unit" 23 "workplace in urban areas and located in: detached structure adjacent to own dwelling unit" 24 "workplace in urban areas and located in: own enterprise/unit/office/shop but away from own dwelling" 25 "workplace in urban areas and located in: employer's dwelling unit" 26 "workplace in urban areas and located in: employer's enterprise/unit/office/shop but outside employer's dwelling" 27 "workplace in urban areas and located in: street with fixed location" 28 "workplace in urban areas and located in: construction site" 29 "workplace in urban areas and located in: others" 99 "no fixed workplace"
+label values subs_work_loc subs_work_loc
+
+label define subs_ent_code 01 "proprietary: male" 02 "proprietary: female" 03 "partnership: with members from same household" 04 "partnership: with members from different household" 05 "Government/local body" 06 "Public Sector Enterprises" 07 "Autonomous Bodies" 08 "Public/Private limited company" 10"Co-operative societies" 11 "trust/other non-profit institutions" 12 "employer's households(i.e., private households employing maid servant, watchman, cook, etc.)" 19 "others"
+label values subs_ent_code subs_ent_code
+
+label define subs_workers 1 "less than 6" 2 "6 and above but less than 10" 3 "10 and above but less than 20" 4 "20 and above" 9 "not known"
+label values subs_workers subs_workers
+
+label define subs_job_cntrct 1 "no written job contract" 2 "written job contract: for 1 year or less" 3 "written job contract: more than 1 year to 3 years" 4 "written job contract: more than 3 years" 
+label values subs_job_cntrct subs_job_cntrct
+
+label define subs_paid_leave 1 "yes" 2 "no"
+label values subs_paid_leave subs_paid_leave
+
+label define subs_ssb 1 "eligible for: only PF/ pension (i.e., GPF, CPF, PPF, pension, etc.)" 2 "eligible for: only gratuity" 3 "eligible for: only health care & maternity benefits" 4 "eligible for: only PF/ pension and gratuity" 5 "eligible for: only PF/ pension and health care & maternity benefits" 6 "eligible for: only gratuity and health care & maternity benefits" 7 "eligible for: PF/ pension, gratuity, health care & maternity benefits" 8 "not eligible for any of above social security benefits" 9 "not known"
+label values subs_ssb subs_ssb
+
+label define stat_code 11 "worked in h.h. enterprise (self-employed): own account worker" 12 "worked in h.h. enterprise (self-employed): employer" 21 "worked in h.h. enterprise (self-employed): worked as helper in h.h. enterprise (unpaid family worker)" 31 "worked as regular salaried/ wage employee" 51 "worked as casual wage labour: in other types of work" 91 "attended educational institution" 92 "attended domestic duties only" 93 "attended domestic duties and was also engaged in fre collection of goods (vegetables, roots, firewood, cattle feed, etc.), sewing, tailoring, weaving, etc. for household use" 94 "rentiers, pensioners , remittance recipients, etc." 95 "not able to work due to disability" 97 "others (including begging, prostitution, etc.)" 41 "worked as casual wage labour in public works other than MGNREG works" 42 "worked as casual wage labour in MGNREG works" 61 "had work in h.h. enterprise but did not work due to: sickness" 62 "had work in h.h. enterprise but did not work due to: other reasons" 71 "had regular salaried/wage employment but did not work due to: sickness" 72 "had regular salaried/wage employment but did not work due to: other reasons" 81 "sought work" 82 "did not seek but was available for work" 98 "did not work due to temporary sickness (for casual workers only)" 99 "children aged 0-4 yrs"
+
+cap label drop sector
+label define sector 1 "Rural" 2 "Urban"
+label values sector sector
+order hhid state
+
+/* label current weekly status codes */
+label values sta_codeact1_7 stat_code
+label values sta_codeact2_7 stat_code
+label values sta_codeact1_6 stat_code
+label values sta_codeact2_6 stat_code
+label values sta_codeact1_5 stat_code
+label values sta_codeact2_5 stat_code
+label values sta_codeact1_4 stat_code
+label values sta_codeact2_4 stat_code
+label values sta_codeact1_3 stat_code
+label values sta_codeact2_3 stat_code
+label values sta_codeact1_2 stat_code
+label values sta_codeact2_2 stat_code
+label values sta_codeact1_1 stat_code
+label values sta_codeact2_1 stat_code
+label values CWS stat_code  
+
+
+/* =============================================================================
+   PHASE 3: MERGING DATASETS
+   ============================================================================= */
+/* Step 3.1: Many-to-One Merge. 
+   We merge the individual dataset (many people) with the household dataset 
+   (one household) using 'hhid'. This brings household-level data (e.g., sector) 
+   down to each individual person's row.
+*/
+save "plfs_ind.dta", replace
+merge m:1 hhid using "plfs_hh.dta", force
+drop _merge
+save "plfs.dta", replace
+
+
+/* =============================================================================
+   PHASE 4: CONSTRUCTING LABOUR FORCE INDICATORS
+   ============================================================================= */
+
+/* 
+   WHAT THIS IS: We load the merged dataset containing both household and individual data.
+*/
+use "plfs.dta"
+
+/* --- 1. USUAL PRINCIPAL STATUS (PS) --- */
+/* 
+   WHY WE CALCULATE THIS: The Principal Status (PS) measures the activity a person 
+   spent the *majority* of their time doing over the last 365 days. It is a long-term 
+   measure of labor attachment.
+   
+   NSSO STATUS CODE LOGIC:
+   Codes 11 to 51 = Various forms of employment (Self-employed, Regular wage, Casual labor)
+   Code 81 = Unemployed (seeking/available for work)
+   Codes 91 to 99 = Out of Labour Force (Students, Homemakers, Pensioners, Children)
+*/
+
+/* 
+   COMMAND EXPLANATION: In Stata, evaluating an expression in parentheses like 
+   (var &lt; 90) returns a 1 if true, and 0 if false. Because all employment codes 
+   are below 90, this elegantly creates a binary dummy where 1 = Employed, 0 = Not Employed.
+*/
+gen lab_for = (prnc_status_code &lt; 90) //labour force ps
+
+/* 
+   COMMAND EXPLANATION: We manually assign '2' to those who are strictly unemployed (code 81).
+   Now our variable has 1=Employed, 2=Unemployed, 0=Everyone else.
+*/
+replace lab_for=2 if prnc_status_code==81 //unemployed
+
+/* 
+   COMMAND EXPLANATION: We duplicate the variable to safely create a composite categorical 
+   variable without destroying our original calculation.
+*/
+gen lab_comp=lab_for
+
+/* 
+   COMMAND EXPLANATION: We isolate students (Code 91) and assign them '3'.
+*/
+replace lab_comp=3 if prnc_status_code==91 //in education
+
+/* 
+   COMMAND EXPLANATION: The `recode` command reorganizes our numbers into a clean, 
+   consecutive categorical variable. 
+   Old 3 (Education) becomes New 1. 
+   Old 1 (Employed) becomes New 2. 
+   Old 2 (Unemployed) becomes New 3. 
+   Old 0 (Other OLF like homemakers) becomes New 4.
+*/
+recode lab_comp (3=1) (1=2) (2=3) (0=4) (.=.) , gen(lab_cb) 
+
+/* 
+   COMMAND EXPLANATION: We attach text labels to these numbers so our tables are readable.
+*/
+label define lab_cb 1 "Education" 2 "Employed" 3 "Unemployed" 4 "OLF"
+label value lab_cb lab_cb
+
+/* 
+   COMMAND EXPLANATION: The `table` command generates cross-tabulations. 
+   - [pw=comb_wt]: Applies the probability weights so the sample scales to the population.
+   - stat(fvpercent ...): Tells Stata to output the percentages of the categories.
+*/
+table  survey (  sector sex) [pw=comb_wt], stat(fvpercent lab_for ) nformat(%5.2f)
+table  survey (  sector sex) [pw=comb_wt], stat(fvpercent lab_cb ) nformat(%5.2f)
+
+
+/* --- 2. USUAL PRINCIPAL AND SUBSIDIARY STATUS (PS+SS) --- */
+/* 
+   WHY WE CALCULATE THIS: The Indian economy has vast informal and seasonal sectors. 
+   A person might be a student for 9 months (PS=Education) but work on a farm for 2 
+   months during harvest. The PS+SS framework captures this by "upgrading" anyone 
+   who did at least 30 days of economic activity in a subsidiary capacity.
+*/
+
+/* 
+   COMMAND EXPLANATION: Checks if the person has a valid subsidiary employment code (11 to 51).
+   Returns 1 if they do, 0 if they don't.
+*/
+gen lab_for_ss = ( subs_status_code &lt;=51) //having sub status (ss)
+
+/* 
+   COMMAND EXPLANATION: Anyone who was already employed in their Principal Status 
+   must automatically be counted as employed in PS+SS.
+*/
+replace lab_for_ss = 1 if lab_for==1 // having ps status so counting in the labour force
+
+/* 
+   COMMAND EXPLANATION: We copy the 4-category PS variable we made earlier.
+*/
+gen lab_cbpss=lab_cb // Copy the PS status first
+
+/* 
+   COMMAND EXPLANATION: THE CRITICAL STEP. If a person has *any* value in the 
+   subsidiary status code (i.e., not missing `!=.`), we forcefully change their 
+   status to '2' (Employed). This overrides their student or OLF status.
+*/
+replace lab_cbpss=2 if  subs_status_code!=. 
+label value lab_cbpss lab_cb
+
+/* 
+   WHY WE DO THIS: This `tab` is a sanity check. We look at the matrix to ensure 
+   that nobody moved from "Employed" to "Unemployed". The only movement should be 
+   people from Education/OLF migrating into the Employed row.
+*/
+tab lab_cbpss lab_cb
+
+/* 
+   COMMAND EXPLANATION: This generates the Worker Population Ratio (WPR) for PS+SS.
+*/
+table  sector ( sex   ) [pw=comb_wt], stat(fvpercent lab_cbpss ) nformat(%5.1f) 
+// Report match: Rural male (56.3%), Rural female (34.8%), Urban male (56.4%), Urban female (20.7%)
+
+/* 
+   WHY WE USE 'if age&gt;=15&age&lt;=29': The government explicitly tracks "Youth" metrics 
+   to monitor new labor market entrants.
+*/
+table  sector ( sex   ) [pw=comb_wt] if age&gt;=15&age&lt;=29, stat(fvpercent lab_cbpss ) nformat(%5.1f) 
+// Report match: LFPR = Employed + Unemployed. Rural (48.1%), Urban (42.6%)
+
+
+/* =============================================================================
+   PHASE 5: ESTIMATING MACROECONOMIC RATES (LFPR & UR)
+   ============================================================================= */
+
+/* --- ESTIMATING UNEMPLOYMENT RATE (UR) FOR PS+SS --- */
+/* 
+   WHY THIS CALCULATION MATTERS: Graduate students often incorrectly calculate the 
+   Unemployment Rate by dividing the unemployed by the *entire* population. 
+   Econometrically, UR = Unemployed / (Employed + Unemployed). You MUST exclude 
+   students and homemakers, or your UR will be artificially low.
+*/
+
+/* 
+   COMMAND EXPLANATION: `if age&gt;=15 & (lab_cbpss==2 | lab_cbpss==3)` restricts 
+   the denominator. It tells Stata: "Only run this table for people aged 15+ WHO ARE ALSO 
+   currently employed (2) or unemployed (3)."
+*/
+table  sector ( sex   ) [pw=comb_wt] if age&gt;=15&(lab_cbpss==2|lab_cbpss==3), stat(fvpercent lab_cbpss ) nformat(%5.1f) 
+// Report match: Rural male (2.7%), Rural female (2.1%), Urban male (4.4%), Urban female (7.1%)
+
+/* 
+   WHY WE DO THIS: Creating a strict 0/1 binary variable for Labour Force Participation. 
+   When a variable is 0 or 1, the mean of that variable is equal to the proportion (rate).
+*/
+gen lab_forpss=.
+replace lab_forpss=0 if lab_cbpss==1|lab_cbpss==4 // 0 = OLF or Education
+replace lab_forpss=1 if lab_cbpss==2|lab_cbpss==3 // 1 = Employed or Unemployed
+table  sector ( sex   ) [pw=comb_wt] if age&gt;=15&age&lt;=29, stat(fvpercent lab_forpss ) nformat(%5.1f) 
+
+/* 
+   WHY WE DO THIS: Creating a strict 0/1 binary variable for Unemployment. 
+   Notice that students/OLF are left as missing (.). They are completely excluded 
+   from the calculation.
+*/
+gen ur_psss=.
+replace ur_psss=0 if lab_cbpss==2 // 0 = Employed
+replace ur_psss=1 if lab_cbpss==3 // 1 = Unemployed
+table  sector ( sex   ) [pw=comb_wt] if age&gt;=15, stat(fvpercent ur_psss ) nformat(%5.1f) 
+
+
+/* --- 3. CURRENT WEEKLY STATUS (CWS) --- */
+/* 
+   WHY WE CALCULATE THIS: CWS uses a much shorter reference period (the last 7 days). 
+   If someone worked for even 1 hour in the last week, they are employed. This metric 
+   is highly sensitive to short-term economic shocks and seasonal variations.
+   
+   Note: CWS has TWO unemployment codes: 
+   81 = Sought work
+   82 = Did not seek but was available for work (capturing discouraged workers).
+*/
+
+/* COMMAND EXPLANATION: Creates binary Employed dummy (codes below 90) */
+gen lab_for_cws = (CWS &lt; 90) //labour force cws
+
+/* COMMAND EXPLANATION: Assigns 2 for both types of CWS unemployment */
+replace lab_for_cws=2 if CWS==81 //unemployed
+replace lab_for_cws=2 if CWS==82 //unemployed (did not seek but was available for work)
+
+gen lab_comp_cws=lab_for_cws
+
+/* COMMAND EXPLANATION: Isolates students for the CWS timeframe */
+replace lab_comp_cws=3 if CWS==91 //in education
+
+/* COMMAND EXPLANATION: Recodes into the standard 4-category framework */
+recode lab_comp_cws (3=1) (1=2) (2=3) (0=4) (.=.) , gen(lab_cb_cws) //labour force composition cws
+label define lab_cb_cws 1 "Education" 2 "Employed" 3 "Unemployed" 4 "OLF"
+label value lab_cb_cws lab_cb_cws
+
+/* 
+   COMMAND EXPLANATION: Creates the 0/1 binary for CWS Labour Force Participation.
+*/
+gen lab_forpss_cws=.
+replace lab_forpss_cws=0 if lab_cb_cws==1|lab_cb_cws==4
+replace lab_forpss_cws=1 if lab_cb_cws==2|lab_cb_cws==3
+
+table  sector ( sex   ) [pw=comb_wt] if age&gt;=15, stat(fvpercent lab_forpss_cws ) nformat(%5.1f) 
+// Report match: Rural male (78.7%), Rural female (39.6%), Urban male (75.0%), Urban female (26.1%)
+
+/* 
+   COMMAND EXPLANATION: Creates the 0/1 binary for CWS Unemployment Rate.
+*/
+gen ur_cws=.
+replace ur_cws=0 if lab_cb_cws==2
+replace ur_cws=1 if lab_cb_cws==3
+
+table  sector ( sex   ) [pw=comb_wt] if age&gt;=15, stat(fvpercent ur_cws ) nformat(%5.1f) 
+// Report match: Rural male (4.4%), Rural female (3.9%), Urban male (6.0%), Urban female (8.7%)
+
+/* 
+   COMMAND EXPLANATION: Calculates the standard CWS categorical proportions (Worker Population Ratio).
+*/
+table  sector ( sex   ) [pw=comb_wt] if age&gt;=15, stat(fvpercent lab_cb_cws ) nformat(%5.1f) 
+// Report match: Rural male (75.3%), Rural female (38.1%), Urban male (70.5%), Urban female (23.9%)
+
+/* =============================================================================
+   PHASE 5.5: CALCULATING THE NEET RATE (Not in Employment, Education, or Training)
+   ============================================================================= */
+/* WHY WE CALCULATE THIS: The NEET rate is a crucial indicator of youth vulnerability. 
+   Traditional Unemployment Rates (UR) only capture youth actively looking for jobs. 
+   NEET captures youth who are completely detached from both the labor market and 
+   human capital accumulation (e.g., discouraged workers, or women doing unpaid domestic work).
+   
+   ECONOMETRIC LOGIC:
+   We already categorized the population into 4 groups:
+   1 = Education (Code 91)
+   2 = Employed (Codes 11-51)
+   3 = Unemployed (Codes 81, 82)
+   4 = Out of Labor Force / Non-Student (Codes 92, 93, 94, 95, 97)
+
+   Therefore:
+   Not NEET (0) = Categories 1 and 2
+   NEET (1)     = Categories 3 and 4
+*/
+
+// 1. Generate the NEET indicator for the PS+SS framework
+gen neet_psss = .
+replace neet_psss = 0 if lab_cbpss == 1 | lab_cbpss == 2
+replace neet_psss = 1 if lab_cbpss == 3 | lab_cbpss == 4
+
+// Apply text labels for clean output
+label define neet_lbl 0 "Not NEET" 1 "NEET"
+label values neet_psss neet_lbl
+
+// 2. Generate the NEET indicator for the Current Weekly Status (CWS) framework
+gen neet_cws = .
+replace neet_cws = 0 if lab_cb_cws == 1 | lab_cb_cws == 2
+replace neet_cws = 1 if lab_cb_cws == 3 | lab_cb_cws == 4
+label values neet_cws neet_lbl
+
+/* COMMAND EXPLANATION: We use `svy: proportion` with our `youth` subpopulation 
+   (Age 15-29). Look at the "_prop_2" (or "NEET") row in the output to see the 
+   percentage of youth who are NEET, broken down by rural/urban and gender.
+*/
+
+// Estimate NEET Rate (PS+SS) for Youth (15-29)
+display "--- NEET RATE (PS+SS) FOR YOUTH 15-29 ---"
+svy, subpop(youth): proportion neet_psss, over(sector sex)
+
+// Estimate NEET Rate (CWS) for Youth (15-29)
+display "--- NEET RATE (CWS) FOR YOUTH 15-29 ---"
+svy, subpop(youth): proportion neet_cws, over(sector sex)
+
+/* DEEP DIVE FOR THESIS (OPTIONAL): 
+   Why are they NEET? Let's break down the NEET youth by their actual activity code.
+   This will show if NEET is driven by unemployment (81) or domestic duties (92/93).
+*/
+display "--- COMPOSITION OF NEET YOUTH (PS+SS) ---"
+svy, subpop(if youth==1 & neet_psss==1): tabulate prnc_status_code sex, col format(%5.1f)
+
+save "plfs_complete.dta", replace</code></pre>
+              </div>
+            </div>
+
+            <!-- TEMPLATE CARD 3: Advanced Labour Models (plfs_advanced.do) -->
+            <div class="border border-violet-500/20 bg-violet-500/[0.01] dark:bg-violet-500/[0.02] rounded-xl p-6 transition-all hover:border-violet-500/40">
+              <div class="collapse-btn flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div class="flex items-start gap-4">
+                  <div class="p-3 bg-violet-500/10 text-violet-600 dark:text-violet-400 rounded-xl mt-1">
+                    <i class="fas fa-chart-line text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-serif text-xl font-semibold text-gray-900 dark:text-white tracking-wide group-hover:text-violet-500">
+                      plfs_advanced.do — PLFS 2023-24: Wage Inequality & Causal Models
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-light mt-1 max-w-3xl">
+                      Advanced econometric analysis and identification frameworks. Features standard Mincer human capital models, structural quantile regression, localized state fixed effects constraints, and parametric Blinder-Oaxaca structural pay decompositions.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 self-end md:self-center">
+                  <span class="text-xs font-mono px-2.5 py-1 bg-violet-500/10 text-violet-600 dark:text-violet-400 rounded">Inference</span>
+                  <i class="fas fa-chevron-down text-violet-500 transition-transform duration-300"></i>
+                </div>
+              </div>
+
+              <div class="collapse-content mt-6 relative group">
+                <div class="mb-4 p-4 bg-violet-500/5 border border-violet-500/10 rounded-lg text-xs text-gray-600 dark:text-gray-400 flex flex-col gap-2">
+                  <span class="flex items-center gap-2"><i class="fas fa-exclamation-triangle text-amber-500"></i> <strong>User Packages Required:</strong></span>
+                  <ul class="list-disc list-inside pl-5 space-y-1">
+                    <li><code class="font-mono bg-violet-500/10 px-1 rounded">ssc install oaxaca</code> (Required for Part A structural decomp analysis)</li>
+                    <li><code class="font-mono bg-violet-500/10 px-1 rounded">ssc install psmatch2</code> (Required for Part B structural matching balancing)</li>
+                  </ul>
+                </div>
+                <button class="copy-btn absolute top-24 right-3 z-10 text-xs border border-gray-400 bg-gray-200 dark:border-white/20 dark:bg-white/10 px-3 py-1.5 rounded transition-colors opacity-0 group-hover:opacity-100">Copy Script</button>
+                <pre><code class="language-stata">/**********************************************************************
+TITLE:
+Earnings, Wage Inequality and Returns to Education
+
+Purpose
+-------
+This module develops a complete workflow for analysing wages using
+PLFS microdata. It combines descriptive statistics, wage inequality,
+human capital models and distributional analysis.
+
+IMPORTANT
+---------
+Verify the appropriate earnings variable for your PLFS round and worker
+category. In this template, ERSW_1 is used as an illustrative earnings
+measure.
+
+Input:
+    plfs.dta
+
+**********************************************************************/
+use "plfs.dta", clear
+
+*--------------------------------------------------------------------*
+* SECTION 1. Sample selection
+*--------------------------------------------------------------------*/
+
+* Regular wage/salaried workers
+keep if prnc_status_code==31
+
+gen wage = ERSW_1
+replace wage = . if wage&lt;=0 | missing(wage)
+
+drop if missing(wage)
+
+gen ln_wage = ln(wage)
+gen age2 = age^2
+gen female = (sex==2)
+
+summ wage ln_wage
+
+*--------------------------------------------------------------------*
+* SECTION 2. Descriptive wage analysis
+*--------------------------------------------------------------------*/
+
+table sector (sex) [pw=comb_wt], ///
+    statistic(mean wage) ///
+    statistic(median wage)
+
+table gen_edu [pw=comb_wt], ///
+    statistic(mean wage)
+
+table social_group [pw=comb_wt], ///
+    statistic(mean wage)
+
+*--------------------------------------------------------------------*
+* SECTION 3. Wage distribution
+*--------------------------------------------------------------------*/
+
+centile wage, centile(5 10 25 50 75 90 95)
+
+_pctile wage [pw=comb_wt], nq(10)
+
+histogram wage, fraction title("Monthly Wage Distribution")
+graph export "Histogram_Wages.png", replace
+
+histogram ln_wage, fraction normal ///
+    title("Log Wage Distribution")
+graph export "Histogram_Log_Wages.png", replace
+
+*--------------------------------------------------------------------*
+* SECTION 4. Mincer earnings equation
+*--------------------------------------------------------------------*/
+
+reg ln_wage ///
+    c.age c.age2 ///
+    i.gen_edu ///
+    i.sex ///
+    i.sector ///
+    i.state ///
+    [pw=comb_wt], vce(cluster state)
+
+estimates store mincer
+
+margins gen_edu
+marginsplot
+
+*--------------------------------------------------------------------*
+* SECTION 5. Gender wage gap
+*--------------------------------------------------------------------*/
+
+mean wage [pw=comb_wt], over(sex)
+
+reg ln_wage ///
+    i.female ///
+    c.age c.age2 ///
+    i.gen_edu ///
+    i.state ///
+    [pw=comb_wt], vce(cluster state)
+
+*--------------------------------------------------------------------*
+* SECTION 6. Quantile regression
+*--------------------------------------------------------------------*/
+
+foreach q in 10 25 50 75 90 {
+
+    qreg ln_wage ///
+        c.age c.age2 ///
+        i.gen_edu ///
+        i.sex, quantile(`=`q'/100')
+
+    estimates store q`q'
+}
+
+estimates table q10 q25 q50 q75 q90, b(%8.3f)
+
+*--------------------------------------------------------------------*
+* SECTION 7. Wage inequality
+*--------------------------------------------------------------------*/
+
+egen decile = cut(wage), group(10)
+
+table decile [pw=comb_wt], ///
+    statistic(mean wage)
+
+graph box wage, over(sex)
+graph export "Boxplot_Wages_Sex.png", replace
+
+graph box wage, over(sector)
+graph export "Boxplot_Wages_Sector.png", replace
+
+*--------------------------------------------------------------------*
+* SECTION 8. Rural-Urban comparison
+*--------------------------------------------------------------------*/
+
+ttest wage, by(sector)
+
+*--------------------------------------------------------------------*
+* SECTION 9. State rankings
+*--------------------------------------------------------------------*/
+
+preserve
+
+collapse (mean) wage [pw=comb_wt], by(state)
+
+gsort -wage
+
+list state wage in 1/20, noobs
+
+restore
+
+*--------------------------------------------------------------------*
+* SECTION 10. Publication tables
+*--------------------------------------------------------------------*/
+
+collect clear
+
+table sector (sex), ///
+    statistic(mean wage) ///
+    statistic(sd wage)
+
+collect export "Table_Wages.xlsx", replace
+*****************************************************************************************************************************************************************
+use "plfs2025.dta", clear
+
+*---------------------------------------------------------------*
+* Construct illustrative outcome variable
+*---------------------------------------------------------------*
+
+gen employed = (prnc_status_code < 81)
+replace employed = 1 if !missing(subs_status_code)
+
+label define emp 0 "Not employed" 1 "Employed", replace
+label values employed emp
+
+gen age2 = age^2
+
+/**********************************************************************
+MODEL 1. Linear Probability Model (LPM)
+
+Useful benchmark despite known limitations.
+**********************************************************************/
+
+reg employed c.age c.age2 i.sex i.gen_edu i.sector [pw=comb_wt], vce(robust)
+
+estimates store lpm
+
+/**********************************************************************
+MODEL 2. Probit Model
+
+Coefficients are not marginal effects.
+**********************************************************************/
+
+probit employed c.age c.age2 i.sex i.gen_edu i.sector ///
+    [pw=comb_wt], vce(robust)
+
+margins, dydx(*) post
+
+estimates store probit
+
+/**********************************************************************
+MODEL 3. Logit Model
+**********************************************************************/
+
+logit employed c.age c.age2 i.sex i.gen_edu i.sector ///
+    [pw=comb_wt], vce(robust)
+
+margins sex
+*margins gen_edu
+
+estimates store logit
+
+/**********************************************************************
+MODEL 4. Interaction Effects
+
+Does the education gradient differ by sex?
+**********************************************************************/
+
+logit employed i.sex##i.gen_edu c.age c.age2 i.sector ///
+    [pw=comb_wt], vce(robust)
+
+margins sex#gen_edu
+marginsplot
+
+/**********************************************************************
+MODEL 5. State Fixed Effects
+
+Controls for time-invariant differences across states.
+**********************************************************************/
+
+reg employed c.age c.age2 i.sex i.gen_edu i.state ///
+    [pw=comb_wt], vce(cluster state)
+
+estimates store fe_state
+
+/**********************************************************************
+
+TOPIC:
+Decomposition and Causal Inference Applications
+
+Purpose
+-------
+This module introduces advanced empirical methods frequently used in
+labour economics and development economics research.
+
+NOTE
+----
+Some commands require user-written packages:
+    ssc install oaxaca
+    ssc install psmatch2
+
+**********************************************************************/
+
+clear all
+set more off
+
+use "plfs.dta", clear
+
+*--------------------------------------------------------------------*
+* Example outcome: Employment (PS+SS)
+*--------------------------------------------------------------------*/
+
+gen employed = (prnc_status_code &lt; 81)
+replace employed = 1 if !missing(subs_status_code)
+
+gen female = (sex==2)
+gen age2 = age^2
+
+/**********************************************************************
+PART A. Oaxaca–Blinder decomposition
+
+Question:
+How much of the male-female employment gap is explained by observable
+characteristics such as education and age?
+**********************************************************************/
+
+capture which oaxaca
+if _rc==0 {
+    oaxaca employed age age2 gen_edu sector [pw=comb_wt], ///
+        by(female)
+}
+else {
+    display "Install package: ssc install oaxaca"
+}
+
+/**********************************************************************
+PART B. Propensity Score Matching (Illustration)
+
+Treatment:
+    Female (=1)
+
+Outcome:
+    Employment
+
+Interpretation:
+Estimate the average difference in employment after balancing observed
+characteristics. This is an illustration and should not be interpreted
+as causal without strong assumptions.
+**********************************************************************/
+
+capture which psmatch2
+if _rc==0 {
+    psmatch2 female age age2 i.gen_edu i.sector, ///
+        outcome(employed)
+}
+else {
+    display "Install package: ssc install psmatch2"
+}
+
+/**********************************************************************
+PART C. Inverse Probability Weighting
+
+Illustrative propensity score estimation.
+**********************************************************************/
+
+logit female age age2 i.gen_edu i.sector
+
+predict pscore, pr
+
+gen ipw = .
+replace ipw = 1/pscore if female==1
+replace ipw = 1/(1-pscore) if female==0
+
+mean employed [pw=ipw], over(female)
+
+/**********************************************************************
+PART D. Heterogeneity Analysis
+
+Does the gender employment gap differ by education?
+**********************************************************************/
+
+logit employed i.female##i.gen_edu c.age c.age2 i.sector ///
+    [pw=comb_wt], vce(robust)
+
+margins female#gen_edu
+marginsplot</code></pre>
+              </div>
+            </div>
+
+            <!-- TEMPLATE CARD 4: Cleaning Workspace (cleaning.do) -->
+            <div class="border border-amber-500/20 bg-amber-500/[0.01] dark:bg-amber-500/[0.02] rounded-xl p-6 transition-all hover:border-amber-500/40">
+              <div class="collapse-btn flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div class="flex items-start gap-4">
+                  <div class="p-3 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-xl mt-1">
+                    <i class="fas fa-broom text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-serif text-xl font-semibold text-gray-900 dark:text-white tracking-wide group-hover:text-amber-500">
+                      cleaning.do — General Project Data Cleaning Framework
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-light mt-1 max-w-3xl">
+                      A standalone directory structure utility. Automates system environment routing rules, diagnostic missingness summaries, outlier capping configurations via winsorization, duplicate filtering parameters, and variable label dictionaries.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 self-end md:self-center">
+                  <span class="text-xs font-mono px-2.5 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded">Workspace</span>
+                  <i class="fas fa-chevron-down text-amber-500 transition-transform duration-300"></i>
+                </div>
+              </div>
+
+              <div class="collapse-content mt-6 relative group">
+                <button class="copy-btn absolute top-3 right-3 z-10 text-xs border border-gray-400 bg-gray-200 dark:border-white/20 dark:bg-white/10 px-3 py-1.5 rounded transition-colors opacity-0 group-hover:opacity-100">Copy Script</button>
+                <pre><code class="language-stata">********************************************************************************
 * DATA CLEANING TEMPLATE
 * AUTHOR: Dr Abdulla
 * DESCRIPTION: Handle missings, outliers, duplicates, and validate data.
@@ -223,9 +3059,9 @@
 clear all
 set more off
 global project_root "C:/Users/YourName/Dropbox/Projects/YourProject"
-global data_raw     "$project_root/01_data/raw"
-global data_clean   "$project_root/01_data/clean"
-global log          "$project_root/04_log"
+global data_raw      "$project_root/01_data/raw"
+global data_clean    "$project_root/01_data/clean"
+global log           "$project_root/04_log"
 
 capture log close
 log using "$log/cleaning_`c(current_date)'.log", replace
@@ -237,20 +3073,35 @@ winsor2 income age, cuts(1 99) replace
 duplicates drop id, force
 recode gender (1=0 "Male") (2=1 "Female"), gen(gender_bin)
 save "$data_clean/cleaned_data.dta", replace
-log close
-                </code></pre>
+log close</code></pre>
               </div>
             </div>
 
-            <!-- Transformation -->
-            <div class="border border-gray-200 dark:border-gray-800 rounded-xl p-6">
-              <h3 class="collapse-btn font-medium text-lg text-gray-900 dark:text-white flex items-center gap-3">
-                <i class="fas fa-chevron-down text-brand-gold transition-transform"></i> transformation.do — Reshape & Merge
-              </h3>
-              <div class="collapse-content mt-4 relative group">
-                <button class="copy-btn absolute top-3 right-3 text-xs border border-gray-400 bg-gray-200 dark:border-white/20 dark:bg-white/10 px-3 py-1.5 rounded transition-colors opacity-0 group-hover:opacity-100">Copy</button>
-                <pre><code class="language-stata">
-********************************************************************************
+            <!-- TEMPLATE CARD 5: Transformation (transformation.do) -->
+            <div class="border border-blue-500/20 bg-blue-500/[0.01] dark:bg-blue-500/[0.02] rounded-xl p-6 transition-all hover:border-blue-500/40">
+              <div class="collapse-btn flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div class="flex items-start gap-4">
+                  <div class="p-3 bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-xl mt-1">
+                    <i class="fas fa-random text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-serif text-xl font-semibold text-gray-900 dark:text-white tracking-wide group-hover:text-blue-500">
+                      transformation.do — Reshape, Horizontal Math & Data Merging
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-light mt-1 max-w-3xl">
+                      A code repository for non-linear data re-scaling. Handles automated generation of standardized Z-scores, horizontal horizontal averages via <code class="font-mono bg-blue-500/10 px-1 rounded">rowmean</code>, wide-to-long dataset pivoting, and relational merges.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 self-end md:self-center">
+                  <span class="text-xs font-mono px-2.5 py-1 bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded">Transform</span>
+                  <i class="fas fa-chevron-down text-blue-500 transition-transform duration-300"></i>
+                </div>
+              </div>
+
+              <div class="collapse-content mt-6 relative group">
+                <button class="copy-btn absolute top-3 right-3 z-10 text-xs border border-gray-400 bg-gray-200 dark:border-white/20 dark:bg-white/10 px-3 py-1.5 rounded transition-colors opacity-0 group-hover:opacity-100">Copy Script</button>
+                <pre><code class="language-stata">********************************************************************************
 * DATA TRANSFORMATION TEMPLATE
 ********************************************************************************
 use "$data_clean/cleaned_data.dta", clear
@@ -259,20 +3110,35 @@ egen z_age = std(age)
 reshape long sales_, i(id) j(year)
 merge 1:1 id year using "$data_clean/covariates.dta", nogen
 bysort region: egen mean_income = mean(income)
-save "$data_transform/analysis_ready.dta", replace
-                </code></pre>
+save "$data_transform/analysis_ready.dta", replace</code></pre>
               </div>
             </div>
             
-            <!-- Mapping -->
-            <div class="border border-gray-200 dark:border-gray-800 rounded-xl p-6">
-              <h3 class="collapse-btn font-medium text-lg text-gray-900 dark:text-white flex items-center gap-3">
-                <i class="fas fa-chevron-down text-brand-gold transition-transform"></i> mapping.do — Choropleth Maps
-              </h3>
-              <div class="collapse-content mt-4 relative group">
-                <button class="copy-btn absolute top-3 right-3 text-xs border border-gray-400 bg-gray-200 dark:border-white/20 dark:bg-white/10 px-3 py-1.5 rounded transition-colors opacity-0 group-hover:opacity-100">Copy</button>
-                <pre><code class="language-stata">
-********************************************************************************
+            <!-- TEMPLATE CARD 6: Mapping (mapping.do) -->
+            <div class="border border-orange-500/20 bg-orange-500/[0.01] dark:bg-orange-500/[0.02] rounded-xl p-6 transition-all hover:border-orange-500/40">
+              <div class="collapse-btn flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div class="flex items-start gap-4">
+                  <div class="p-3 bg-orange-500/10 text-orange-600 dark:text-orange-400 rounded-xl mt-1">
+                    <i class="fas fa-map-marked-alt text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-serif text-xl font-semibold text-gray-900 dark:text-white tracking-wide group-hover:text-orange-500">
+                      mapping.do — Geospatial Visualization & Spatial Panels
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-light mt-1 max-w-3xl">
+                      Spatial mapping infrastructure code. Integrates shapefile polygon datasets (<code class="font-mono bg-orange-500/10 px-1 rounded">shp2dta</code>), constructs cross-sectional spatial quantile bins, and plots high-resolution spatial vector assets via <code class="font-mono bg-orange-500/10 px-1 rounded">spmap</code>.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 self-end md:self-center">
+                  <span class="text-xs font-mono px-2.5 py-1 bg-orange-500/10 text-orange-600 dark:text-orange-400 rounded">Spatial</span>
+                  <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                </div>
+              </div>
+
+              <div class="collapse-content mt-6 relative group">
+                <button class="copy-btn absolute top-3 right-3 z-10 text-xs border border-gray-400 bg-gray-200 dark:border-white/20 dark:bg-white/10 px-3 py-1.5 rounded transition-colors opacity-0 group-hover:opacity-100">Copy Script</button>
+                <pre><code class="language-stata">********************************************************************************
 * GEOSPATIAL MAPPING TEMPLATE
 ********************************************************************************
 shp2dta using "$gis_data/india_adm2.shp", database(india_db) coord(india_coord) genid(id) replace
@@ -282,8 +3148,7 @@ merge m:1 district using "india_db.dta", keepusing(id) nogen
 spmap income using "india_coord.dta", id(id) ///
     fcolor(Blues) clmethod(quantile) clnumber(5) ///
     title("Income by District") legend(pos(4))
-graph export "$output/income_map.pdf", replace
-                </code></pre>
+graph export "$output/income_map.pdf", replace</code></pre>
               </div>
             </div>
 
@@ -349,8 +3214,7 @@ graph export "$output/income_map.pdf", replace
           <p class="font-light text-sm text-gray-700 dark:text-gray-300 mb-6">A complete, self-contained workflow combining all webinar and course examples.</p>
           <div class="relative group">
             <button class="copy-btn absolute top-3 right-3 text-xs border border-gray-400 bg-gray-200 dark:border-white/20 dark:bg-white/10 px-3 py-1.5 rounded transition-colors opacity-0 group-hover:opacity-100">Copy</button>
-            <pre><code class="language-stata">
-* ==============================================================================
+            <pre><code class="language-stata">* ==============================================================================
 * STATA LEARNING: COMPLETE DO-FILE (BEGINNER → ADVANCED)
 * ==============================================================================
 clear all
@@ -360,7 +3224,7 @@ set more off
 import excel "https://stats.idre.ucla.edu/stat/data/hsb2.xls", firstrow clear
 rename id ID
 label variable read "Reading Score"
-gen high_math = (math > 60)
+gen high_math = (math &gt; 60)
 save "hsb2_clean.dta", replace
 
 * EXAMPLE 2: SURVEY DATA
@@ -383,8 +3247,7 @@ eststo clear
 foreach var of varlist read write math science {
     eststo: quietly sum `var'
 }
-esttab using "summary_table.rtf", cells(mean sd) replace
-            </code></pre>
+esttab using "summary_table.rtf", cells(mean sd) replace</code></pre>
           </div>
         </div>
       </div>
@@ -436,8 +3299,8 @@ esttab using "summary_table.rtf", cells(mean sd) replace
                 <button class="copy-btn absolute top-3 right-3 text-xs border border-gray-400 bg-gray-200 dark:border-white/20 dark:bg-white/10 px-3 py-1.5 rounded transition-colors opacity-0 group-hover:opacity-100">Copy</button>
                 <pre><code class="language-stata">// Create and Replace
 gen price_k = price / 1000
-replace mpg = . if mpg < 10
-gen expensive = price > 10000</code></pre>
+replace mpg = . if mpg &lt; 10
+gen expensive = price &gt; 10000</code></pre>
               </div>
               <div class="relative group">
                 <button class="copy-btn absolute top-3 right-3 text-xs border border-gray-400 bg-gray-200 dark:border-white/20 dark:bg-white/10 px-3 py-1.5 rounded transition-colors opacity-0 group-hover:opacity-100">Copy</button>
@@ -489,6 +3352,7 @@ egen rank = rank(inc), by(region)</code></pre>
     </div>
   </footer>
 
+  <!-- Code Highlighting Engines -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
   <script>
@@ -503,7 +3367,7 @@ egen rank = rank(inc), by(region)</code></pre>
       localStorage.setItem('theme', htmlElement.classList.contains('dark') ? 'dark' : 'light');
     });
 
-    // Mobile Menu
+    // Mobile Menu Toggle
     document.getElementById('mobile-toggle').addEventListener('click', () => { document.getElementById('mobile-menu').classList.remove('hidden'); document.getElementById('mobile-menu').classList.add('flex'); });
     document.getElementById('mobile-close').addEventListener('click', () => { document.getElementById('mobile-menu').classList.add('hidden'); document.getElementById('mobile-menu').classList.remove('flex'); });
 
@@ -513,35 +3377,36 @@ egen rank = rank(inc), by(region)</code></pre>
 
     tabBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Remove active from all
         tabBtns.forEach(b => {
           b.classList.remove('active', 'text-brand-gold', 'border-b-2', 'border-brand-gold');
           b.classList.add('text-gray-500');
         });
         tabContents.forEach(c => c.classList.remove('active'));
 
-        // Add active to clicked
         btn.classList.add('active', 'text-brand-gold', 'border-b-2', 'border-brand-gold');
         btn.classList.remove('text-gray-500');
         document.getElementById(btn.getAttribute('data-target')).classList.add('active');
       });
     });
 
-    // Accordion Logic
+    // Accordion Control Logic with Icon Rotation Matrix
     document.querySelectorAll('.collapse-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const content = btn.nextElementSibling;
-        const icon = btn.querySelector('i');
+        const icon = btn.querySelector('.fa-chevron-down');
         content.classList.toggle('open');
-        icon.style.transform = content.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+        
+        if (icon) {
+          icon.style.transform = content.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
       });
     });
 
-    // Copy Code Logic
+    // Clipboard Copy Mechanics
     document.querySelectorAll('.copy-btn').forEach(btn => {
       btn.addEventListener('click', function() {
-        const code = this.parentElement.querySelector('code').innerText;
-        navigator.clipboard.writeText(code).then(() => {
+        const codeText = this.parentElement.querySelector('code').innerText;
+        navigator.clipboard.writeText(codeText).then(() => {
           const orig = this.textContent;
           this.textContent = 'Copied!';
           this.classList.add('bg-brand-gold', 'border-brand-gold', 'text-white');
@@ -553,7 +3418,7 @@ egen rank = rank(inc), by(region)</code></pre>
       });
     });
 
-    // Scroll Reveal Animation Observer
+    // Viewport Intersection Animator
     const revealElements = document.querySelectorAll('.reveal');
     const revealOnScroll = new IntersectionObserver(function(entries, observer) {
       entries.forEach(entry => {
